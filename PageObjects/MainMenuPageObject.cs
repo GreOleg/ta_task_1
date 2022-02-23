@@ -7,6 +7,8 @@ namespace ta_task_1.PageObjects
         private IWebDriver chromeDriver;
 
         private readonly By _signInButton = By.CssSelector("a.login");
+        //private readonly By _signOutButton = By.XPath("//a[@title='Log me out']");
+
 
         public MainMenuPageObject(IWebDriver chromeDriver)
         {
@@ -19,5 +21,12 @@ namespace ta_task_1.PageObjects
 
             return new LogInMenuPageObject(chromeDriver);
         }
+
+        //public LogInMenuPageObject SignOut ()
+        //{
+        //    chromeDriver.FindElement(_signOutButton).Click();
+
+        //    return new LogInMenuPageObject(chromeDriver);
+        //}
     }
 }

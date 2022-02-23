@@ -13,7 +13,7 @@ namespace ta_task_1
             var mainMenu = new MainMenuPageObject(_webDriver);
             mainMenu
                 .SignIn()
-                .LogIn(TestUserData.EmailUser)
+                .Registration(TestUserData.EmailUser)
                 .RegistrationUser(
                 TestUserData.FirstNameUser,
                 TestUserData.LastNameUser,
@@ -26,6 +26,8 @@ namespace ta_task_1
                 TestUserData.StateUser,
                 TestUserData.PostCodeUser,
                 TestUserData.MobilePhoneUser)
+                .SignOut()
+                .LogIn(TestUserData.EmailUser, TestUserData.PasswordUser)
                 .ChoiceOfClothes()
                 .SelectionOfSummerDresses(TestUserData.SearchKeyword)
                 .AddDressesToCart()
