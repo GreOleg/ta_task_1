@@ -9,7 +9,7 @@ namespace ta_task_1.PageObjects
         private readonly By _createAnAccountForm = By.CssSelector("form#create-account_form");
         private readonly By _createAnAccountFormEmailInput = By.CssSelector("input#email_create");
         private readonly By _createAnAccountButton = By.CssSelector("button[name='SubmitCreate']");
-        private readonly By _createAccountError = By.XPath("//div[@id='create_account_error']");
+        //private readonly By _createAccountError = By.XPath("//div[@id='create_account_error']");
         private readonly By _signInFormEmailInput = By.CssSelector("input#email");
         private readonly By _signInFormPasswordInput = By.CssSelector("input#passwd");
         private readonly By _signInFormSubmitButton = By.CssSelector("button#SubmitLogin");
@@ -40,17 +40,6 @@ namespace ta_task_1.PageObjects
             chromeDriver.FindElement(_createAnAccountButton).Click();
 
             //WaitUntil.WaitElement(chromeDriver, _createAccountError);
-
-            //if (createAccountError.Displayed)
-            //{
-            //    chromeDriver.FindElement(_signInFormEmailInput).SendKeys(email);
-
-            //    chromeDriver.FindElement(_signInFormPasswordInput).SendKeys(password);
-
-            //    chromeDriver.FindElement(_signInFormSubmitButton).Click();
-
-            //    return new MyAccountPageObject(chromeDriver);
-            //} 
 
             return new RegistrationUserPageObject(chromeDriver);
         }
