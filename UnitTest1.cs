@@ -2,6 +2,7 @@ using NUnit.Framework;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
 using ta_task_1.PageObjects;
+using ta_task_1.TestData;
 
 namespace ta_task_1
 {
@@ -10,19 +11,19 @@ namespace ta_task_1
     {
         private IWebDriver chromeDriver;
                
-        private const string _emailUser = "ivanov-34@example.com";
-        private const string _firstNameUser = "Ivan";
-        private readonly string _lastNameUser = "Ivanov";
-        private readonly string _passwordUser = "11111";
-        private readonly string _dayBirthUser = "24";
-        private readonly string _monthBirthUser = "9";
-        private readonly string _yearBirthUser = "1993";
-        private readonly string _addressUser = "123 Main Street East";
-        private readonly string _cityUser = "Chicago";
-        private readonly string _stateUser = "13";
-        private readonly string _postCodeUser = "20521";
-        private readonly string _mobilePhoneUser = "+375333333333";
-        private readonly string _searchKeyword = "dress";
+        //private const string _emailUser = "ivanov-34@example.com";
+        //private const string _firstNameUser = "Ivan";
+        //private readonly string _lastNameUser = "Ivanov";
+        //private readonly string _passwordUser = "11111";
+        //private readonly string _dayBirthUser = "24";
+        //private readonly string _monthBirthUser = "9";
+        //private readonly string _yearBirthUser = "1993";
+        //private readonly string _addressUser = "123 Main Street East";
+        //private readonly string _cityUser = "Chicago";
+        //private readonly string _stateUser = "13";
+        //private readonly string _postCodeUser = "20521";
+        //private readonly string _mobilePhoneUser = "+375333333333";
+        //private readonly string _searchKeyword = "dress";
 
         [SetUp]
         public void Setup()
@@ -38,21 +39,21 @@ namespace ta_task_1
             var mainMenu = new MainMenuPageObject(chromeDriver);
             mainMenu
                 .SignIn()
-                .LogIn(_emailUser)
+                .LogIn(TestUserData.emailUser)
                 .RegistrationUser(
-                _firstNameUser,
-                _lastNameUser,
-                _passwordUser,
-                _dayBirthUser,
-                _monthBirthUser,
-                _yearBirthUser,
-                _addressUser,
-                _cityUser,
-                _stateUser,
-                _postCodeUser,
-                _mobilePhoneUser)
+                TestUserData.firstNameUser,
+                TestUserData.lastNameUser,
+                TestUserData.passwordUser,
+                TestUserData.dayBirthUser,
+                TestUserData.monthBirthUser,
+                TestUserData.yearBirthUser,
+                TestUserData.addressUser,
+                TestUserData.cityUser,
+                TestUserData.stateUser,
+                TestUserData.postCodeUser,
+                TestUserData.mobilePhoneUser)
                 .ChoiceOfClothes()
-                .SelectionOfSummerDresses(_searchKeyword)
+                .SelectionOfSummerDresses(TestUserData.searchKeyword)
                 .AddDressesToCart()
                 .CheckingItemsInCart();          
         }
