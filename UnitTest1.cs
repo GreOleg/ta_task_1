@@ -17,6 +17,7 @@ namespace ta_task_1
             chromeDriver = new ChromeDriver();
             chromeDriver.Navigate().GoToUrl("http://automationpractice.com");
             chromeDriver.Manage().Window.Maximize();
+            WaitUntil.ShouldLocate(chromeDriver, "http://automationpractice.com");
         }
 
         [Test]
@@ -25,21 +26,21 @@ namespace ta_task_1
             var mainMenu = new MainMenuPageObject(chromeDriver);
             mainMenu
                 .SignIn()
-                .LogIn(TestUserData.emailUser)
+                .LogIn(TestUserData.EmailUser)
                 .RegistrationUser(
-                TestUserData.firstNameUser,
-                TestUserData.lastNameUser,
-                TestUserData.passwordUser,
-                TestUserData.dayBirthUser,
-                TestUserData.monthBirthUser,
-                TestUserData.yearBirthUser,
-                TestUserData.addressUser,
-                TestUserData.cityUser,
-                TestUserData.stateUser,
-                TestUserData.postCodeUser,
-                TestUserData.mobilePhoneUser)
+                TestUserData.FirstNameUser,
+                TestUserData.LastNameUser,
+                TestUserData.PasswordUser,
+                TestUserData.DayBirthUser,
+                TestUserData.MonthBirthUser,
+                TestUserData.YearBirthUser,
+                TestUserData.AddressUser,
+                TestUserData.CityUser,
+                TestUserData.StateUser,
+                TestUserData.PostCodeUser,
+                TestUserData.MobilePhoneUser)
                 .ChoiceOfClothes()
-                .SelectionOfSummerDresses(TestUserData.searchKeyword)
+                .SelectionOfSummerDresses(TestUserData.SearchKeyword)
                 .AddDressesToCart()
                 .CheckingItemsInCart();          
         }

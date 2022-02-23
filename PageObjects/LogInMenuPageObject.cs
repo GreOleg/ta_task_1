@@ -20,8 +20,9 @@ namespace ta_task_1.PageObjects
 
         public RegistrationUserPageObject LogIn(string email)
         {
-            new WebDriverWait(chromeDriver, TimeSpan.FromSeconds(10))
-                .Until(drv => drv.FindElement(_createAnAccountForm));
+            //new WebDriverWait(chromeDriver, TimeSpan.FromSeconds(10))
+            //    .Until(drv => drv.FindElement(_createAnAccountForm));
+            WaitUntil.WaitElement(chromeDriver, _createAnAccountForm);
 
             chromeDriver.FindElement(_createAnAccountFormEmailInput).SendKeys(email);
 
