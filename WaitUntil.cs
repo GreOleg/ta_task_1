@@ -20,15 +20,13 @@ namespace ta_task_1
             }
         }
 
-        public static void WaitSomeInterval(int seconds = 5)
+        public static void WaitSomeInterval(int seconds = 3)
         {
             Task.Delay(TimeSpan.FromSeconds(seconds)).Wait();
         }
 
-        public static void WaitElement(IWebDriver webDriver, By locator, int seconds = 10)
+        public static void WaitElement(IWebDriver webDriver, By locator, int seconds = 20)
         {
-            new WebDriverWait(webDriver, TimeSpan.FromSeconds(seconds)).Until(webDriver => webDriver.FindElement(locator));
-
             new WebDriverWait(webDriver, TimeSpan.FromSeconds(seconds)).Until(e => e.FindElement(locator));
         }
     }

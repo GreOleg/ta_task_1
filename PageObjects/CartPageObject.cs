@@ -1,7 +1,4 @@
-﻿using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
-using System;
+﻿using OpenQA.Selenium;
 
 namespace ta_task_1.PageObjects
 {
@@ -20,15 +17,11 @@ namespace ta_task_1.PageObjects
 
         public CartPageObject CheckingItemsInCart()
         {
-            //var waitCartTitle = new WebDriverWait(chromeDriver, TimeSpan.FromSeconds(10))
-            //   .Until(drv => drv.FindElement(_cartTitle));
             WaitUntil.WaitElement(chromeDriver, _cartTitle);
 
-            IWebElement chiffonDressInCart = chromeDriver.FindElement(_chiffonDressInCart);
-            Assert.IsTrue(chiffonDressInCart.Displayed);
+            Checks.CheckElementDisplyed(chromeDriver, _chiffonDressInCart);
 
-            IWebElement fadedSleeveInCart = chromeDriver.FindElement(_fadedSleeveInCart);
-            Assert.IsTrue(fadedSleeveInCart.Displayed);
+            Checks.CheckElementDisplyed(chromeDriver, _fadedSleeveInCart);
 
             return new CartPageObject(chromeDriver);
         }

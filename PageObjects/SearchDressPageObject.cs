@@ -1,8 +1,5 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
-using OpenQA.Selenium.Support.UI;
-using System;
-using System.Threading;
 
 namespace ta_task_1.PageObjects
 {
@@ -10,7 +7,6 @@ namespace ta_task_1.PageObjects
     {
         private IWebDriver chromeDriver;
 
-        private readonly By _centerColumn = By.XPath("//h1[1]");
         private readonly By _textUnderChiffonDressCard = By.CssSelector("h5[itemprop='name'] a[title='Printed Chiffon Dress']");
         private readonly By _addChiffonDressButton = By.XPath("(//a[@title='Add to cart'])[4]");
         private readonly By _productSuccessfullAddTitle = By.XPath("//h2[normalize-space()='Product successfully added to your shopping cart']");
@@ -26,38 +22,26 @@ namespace ta_task_1.PageObjects
 
         public CartPageObject AddDressesToCart()
         {
-            var waitCenterColumn = new WebDriverWait(chromeDriver, TimeSpan.FromSeconds(20))
-                .Until(drv => drv.FindElement(_centerColumn));
 
-            Actions action2 = new Actions(chromeDriver);
-
-            IWebElement chiffonDressCard = chromeDriver.FindElement(_textUnderChiffonDressCard);
-            action2.MoveToElement(chiffonDressCard).Perform();
+            new Actions(chromeDriver).MoveToElement(chromeDriver.FindElement(_textUnderChiffonDressCard)).Perform();
 
             chromeDriver.FindElement(_addChiffonDressButton).Click();
 
-            Thread.Sleep(3000);
+            WaitUntil.WaitSomeInterval();
 
-            WebDriverWait waitProductSuccessfullAddTitle = new WebDriverWait(chromeDriver, TimeSpan.FromSeconds(5));
-            IWebElement productSuccessfullAddTitle = waitProductSuccessfullAddTitle.Until(e => e.FindElement(_productSuccessfullAddTitle));
+            WaitUntil.WaitElement(chromeDriver, _productSuccessfullAddTitle);
 
-            var continueShoppingButton = chromeDriver.FindElement(_continueShoppingButton);
-            continueShoppingButton.Click();
+            chromeDriver.FindElement(_continueShoppingButton).Click();
 
-            Actions action3 = new Actions(chromeDriver);
+            new Actions(chromeDriver).MoveToElement(chromeDriver.FindElement(_textUnderFadedSleeveCard)).Perform();
 
-            IWebElement fadedSleeveCard = chromeDriver.FindElement(_textUnderFadedSleeveCard);
-            action3.MoveToElement(fadedSleeveCard).Perform();
+            chromeDriver.FindElement(_addFadedSleeveButton).Click();
 
-            IWebElement addFadedSleeveButton = chromeDriver.FindElement(_addFadedSleeveButton);
-            addFadedSleeveButton.Click();
+            WaitUntil.WaitSomeInterval();
 
-            Thread.Sleep(3000);
-
-            WebDriverWait waitProceedToCheckoutButton = new WebDriverWait(chromeDriver, TimeSpan.FromSeconds(10));
-            IWebElement proceedToCheckoutButton = waitProceedToCheckoutButton.Until(e => e.FindElement(_proceedToCheckoutButton));
-            proceedToCheckoutButton.Click();
-
+            WaitUntil.WaitElement(chromeDriver, _proceedToCheckoutButton);
+            chromeDriver.FindElement(_proceedToCheckoutButton).Click();
+           
             return new CartPageObject(chromeDriver);
         }
     }

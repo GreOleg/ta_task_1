@@ -43,8 +43,8 @@ namespace ta_task_1.PageObjects
             string mobilePhone
             )
         {
-            new WebDriverWait(chromeDriver, TimeSpan.FromSeconds(10))
-                .Until(drv => drv.FindElement(_createAnAccountFormPersonalInformationForm));
+
+            WaitUntil.WaitElement(chromeDriver, _createAnAccountFormPersonalInformationForm);
 
             chromeDriver.FindElement(_createAnAccountFormPersonalInformationTitleRadio).Click();
 

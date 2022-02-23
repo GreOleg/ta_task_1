@@ -1,6 +1,4 @@
 using NUnit.Framework;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium;
 using ta_task_1.PageObjects;
 using ta_task_1.TestData;
 

@@ -1,6 +1,4 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
-using System;
 
 namespace ta_task_1.PageObjects
 {
@@ -20,18 +18,14 @@ namespace ta_task_1.PageObjects
 
         public RegistrationUserPageObject LogIn(string email)
         {
-            //new WebDriverWait(chromeDriver, TimeSpan.FromSeconds(10))
-            //    .Until(drv => drv.FindElement(_createAnAccountForm));
+
             WaitUntil.WaitElement(chromeDriver, _createAnAccountForm);
 
             chromeDriver.FindElement(_createAnAccountFormEmailInput).SendKeys(email);
 
             chromeDriver.FindElement(_createAnAccountButton).Click();
 
-            //var createAccountError = new WebDriverWait(chromeDriver, TimeSpan.FromSeconds(10))
-            //    .Until(drv => drv.FindElement(_createAccountError));
-
-            WaitUntil.WaitElement(chromeDriver, _createAccountError);
+            //WaitUntil.WaitElement(chromeDriver, _createAccountError);
 
             //if (createAccountError.Displayed)
             //{

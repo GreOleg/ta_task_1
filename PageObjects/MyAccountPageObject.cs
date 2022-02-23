@@ -1,7 +1,5 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
-using OpenQA.Selenium.Support.UI;
-using System;
 
 namespace ta_task_1.PageObjects
 {
@@ -19,17 +17,10 @@ namespace ta_task_1.PageObjects
 
         public SummerDressesPageObject ChoiceOfClothes()
         {
-            Actions action1 = new Actions(chromeDriver);
+            new Actions(chromeDriver).MoveToElement(chromeDriver.FindElement(_topMenuDressLink)).Perform();
 
-            IWebElement topMenuDressLink = chromeDriver.FindElement(_topMenuDressLink);
-            action1.MoveToElement(topMenuDressLink).Perform();
-
-            WebDriverWait waitPopUpMenu = new WebDriverWait(chromeDriver, TimeSpan.FromSeconds(10));
-            IWebElement popUpMenuSummerDresses = waitPopUpMenu.Until(e => e.FindElement(_popUpMenuSummerDresses));
-            popUpMenuSummerDresses.Click();
-
-            //IWebElement popUpMenuSummerDresses = WaitUntil.WaitElement(chromeDriver, _popUpMenuSummerDresses);
-
+            WaitUntil.WaitElement(chromeDriver, _popUpMenuSummerDresses);
+            chromeDriver.FindElement(_popUpMenuSummerDresses).Click();
 
             return new SummerDressesPageObject(chromeDriver);
         }
