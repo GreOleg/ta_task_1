@@ -20,8 +20,9 @@ namespace ta_task_1.PageObjects
 
         public CartPageObject CheckingItemsInCart()
         {
-            var waitCartTitle = new WebDriverWait(chromeDriver, TimeSpan.FromSeconds(10))
-               .Until(drv => drv.FindElement(_cartTitle));
+            //var waitCartTitle = new WebDriverWait(chromeDriver, TimeSpan.FromSeconds(10))
+            //   .Until(drv => drv.FindElement(_cartTitle));
+            WaitUntil.WaitElement(chromeDriver, _cartTitle);
 
             IWebElement chiffonDressInCart = chromeDriver.FindElement(_chiffonDressInCart);
             Assert.IsTrue(chiffonDressInCart.Displayed);

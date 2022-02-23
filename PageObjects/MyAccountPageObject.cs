@@ -28,6 +28,9 @@ namespace ta_task_1.PageObjects
             IWebElement popUpMenuSummerDresses = waitPopUpMenu.Until(e => e.FindElement(_popUpMenuSummerDresses));
             popUpMenuSummerDresses.Click();
 
+            //IWebElement popUpMenuSummerDresses = WaitUntil.WaitElement(chromeDriver, _popUpMenuSummerDresses);
+
+
             return new SummerDressesPageObject(chromeDriver);
         }
     }

@@ -7,23 +7,12 @@ using ta_task_1.TestData;
 namespace ta_task_1
 {
     [TestFixture]
-    public class Tests
+    public class Tests : BaseTest
     {
-        private IWebDriver chromeDriver;
-               
-        [SetUp]
-        public void Setup()
-        {
-            chromeDriver = new ChromeDriver();
-            chromeDriver.Navigate().GoToUrl("http://automationpractice.com");
-            chromeDriver.Manage().Window.Maximize();
-            WaitUntil.ShouldLocate(chromeDriver, "http://automationpractice.com");
-        }
-
         [Test]
         public void Test1()
         {
-            var mainMenu = new MainMenuPageObject(chromeDriver);
+            var mainMenu = new MainMenuPageObject(_webDriver);
             mainMenu
                 .SignIn()
                 .LogIn(TestUserData.EmailUser)
@@ -43,12 +32,6 @@ namespace ta_task_1
                 .SelectionOfSummerDresses(TestUserData.SearchKeyword)
                 .AddDressesToCart()
                 .CheckingItemsInCart();          
-        }
-
-        [TearDown]
-        public void TearDown()
-        {
-            chromeDriver.Quit();
         }
     }
 }

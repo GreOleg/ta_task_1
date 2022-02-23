@@ -28,8 +28,10 @@ namespace ta_task_1.PageObjects
 
             chromeDriver.FindElement(_createAnAccountButton).Click();
 
-            var createAccountError = new WebDriverWait(chromeDriver, TimeSpan.FromSeconds(10))
-                .Until(drv => drv.FindElement(_createAccountError));
+            //var createAccountError = new WebDriverWait(chromeDriver, TimeSpan.FromSeconds(10))
+            //    .Until(drv => drv.FindElement(_createAccountError));
+
+            WaitUntil.WaitElement(chromeDriver, _createAccountError);
 
             //if (createAccountError.Displayed)
             //{

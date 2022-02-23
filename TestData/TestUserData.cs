@@ -2,7 +2,7 @@
 {
     class TestUserData
     {
-        public static string EmailUser { get; set; } = "ivanov-40@example.com";
+        public static string EmailUser { get; set; } = "ivanov-42@example.com";
         public static string FirstNameUser { get; set; } = "Ivan";
         public static string LastNameUser { get; set; } = "Ivanov";
         public static string PasswordUser { get; set; } = "11111";
