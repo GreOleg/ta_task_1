@@ -11,20 +11,6 @@ namespace ta_task_1
     {
         private IWebDriver chromeDriver;
                
-        //private const string _emailUser = "ivanov-34@example.com";
-        //private const string _firstNameUser = "Ivan";
-        //private readonly string _lastNameUser = "Ivanov";
-        //private readonly string _passwordUser = "11111";
-        //private readonly string _dayBirthUser = "24";
-        //private readonly string _monthBirthUser = "9";
-        //private readonly string _yearBirthUser = "1993";
-        //private readonly string _addressUser = "123 Main Street East";
-        //private readonly string _cityUser = "Chicago";
-        //private readonly string _stateUser = "13";
-        //private readonly string _postCodeUser = "20521";
-        //private readonly string _mobilePhoneUser = "+375333333333";
-        //private readonly string _searchKeyword = "dress";
-
         [SetUp]
         public void Setup()
         {

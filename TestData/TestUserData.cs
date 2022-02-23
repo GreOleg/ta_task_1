@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ta_task_1.TestData
+﻿namespace ta_task_1.TestData
 {
     class TestUserData
     {
-        public static string emailUser { get; set; } = "ivanov-35@example.com";
+        public static string emailUser { get; set; } = "ivanov-36@example.com";
         public static string firstNameUser { get; set; } = "Ivan";
         public static string lastNameUser { get; set; } = "Ivanov";
         public static string passwordUser { get; set; } = "11111";
