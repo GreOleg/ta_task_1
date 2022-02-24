@@ -9,7 +9,7 @@ namespace ta_task_1.PageObjects
 
         private readonly By _topMenuDressLink = By.XPath("//div[@id='block_top_menu']/ul/li[2]/a");
         private readonly By _popUpMenuSummerDresses = By.XPath("(//a[@title='Summer Dresses'][normalize-space()='Summer Dresses'])[2]");
-        private readonly By _signOutButton = By.XPath("//a[@title='Log me out']");
+        //private readonly By _signOutButton = By.XPath("//a[@title='Log me out']");
 
         public MyAccountPageObject(IWebDriver chromeDriver)
         {
@@ -26,11 +26,11 @@ namespace ta_task_1.PageObjects
             return new SummerDressesPageObject(chromeDriver);
         }
 
-        public LogInMenuPageObject SignOut()
-        {
-            chromeDriver.FindElement(_signOutButton).Click();
+        //public LogInMenuPageObject SignOut()
+        //{
+        //    chromeDriver.FindElement(_signOutButton).Click();
 
-            return new LogInMenuPageObject(chromeDriver);
-        }
+        //    return new LogInMenuPageObject(chromeDriver);
+        //}
     }
 }

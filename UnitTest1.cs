@@ -9,11 +9,12 @@ namespace ta_task_1
     {
         [Test]
         public void Test1()
-        {
+        {              
             var mainMenu = new MainMenuPageObject(_webDriver);
+
             mainMenu
-                .SignIn()
-                .Registration(TestUserData.EmailUser)
+                .GoToLogInPage()
+                .EnterUserEmail(TestUserData.GenerateRandomEmail("@examle.com"))
                 .RegistrationUser(
                 TestUserData.FirstNameUser,
                 TestUserData.LastNameUser,
@@ -26,8 +27,6 @@ namespace ta_task_1
                 TestUserData.StateUser,
                 TestUserData.PostCodeUser,
                 TestUserData.MobilePhoneUser)
-                .SignOut()
-                .LogIn(TestUserData.EmailUser, TestUserData.PasswordUser)
                 .ChoiceOfClothes()
                 .SelectionOfSummerDresses(TestUserData.SearchKeyword)
                 .AddDressesToCart()

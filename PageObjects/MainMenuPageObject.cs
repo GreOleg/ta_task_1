@@ -13,7 +13,7 @@ namespace ta_task_1.PageObjects
             this.chromeDriver = chromeDriver;
         }
 
-        public LogInMenuPageObject SignIn ()
+        public LogInMenuPageObject GoToLogInPage()
         {
             chromeDriver.FindElement(_signInButton).Click();
 

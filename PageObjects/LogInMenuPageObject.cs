@@ -19,18 +19,18 @@ namespace ta_task_1.PageObjects
             this.chromeDriver = chromeDriver;
         }
 
-        public MyAccountPageObject LogIn(string email, string password)
-        {
-            chromeDriver.FindElement(_signInFormEmailInput).SendKeys(email);
+        //public MyAccountPageObject LogIn(string email, string password)
+        //{
+        //    chromeDriver.FindElement(_signInFormEmailInput).SendKeys(email);
 
-            chromeDriver.FindElement(_signInFormPasswordInput).SendKeys(password);
+        //    chromeDriver.FindElement(_signInFormPasswordInput).SendKeys(password);
 
-            chromeDriver.FindElement(_signInFormSubmitButton).Click();
+        //    chromeDriver.FindElement(_signInFormSubmitButton).Click();
 
-            return new MyAccountPageObject(chromeDriver);
-        }
+        //    return new MyAccountPageObject(chromeDriver);
+        //}
 
-        public RegistrationUserPageObject Registration(string email)
+        public RegistrationUserPageObject EnterUserEmail(string email)
         {
 
             WaitUntil.WaitElement(chromeDriver, _createAnAccountForm);
