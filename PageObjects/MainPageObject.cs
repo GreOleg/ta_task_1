@@ -2,22 +2,20 @@
 
 namespace ta_task_1.PageObjects
 {
-    class MainMenuPageObject
+    class MainPageObject
     {
         private IWebDriver chromeDriver;
 
         private readonly By _signInButton = By.CssSelector("a.login");
 
-        public MainMenuPageObject(IWebDriver chromeDriver)
+        public MainPageObject(IWebDriver chromeDriver)
         {
             this.chromeDriver = chromeDriver;
         }
-
-        public LogInMenuPageObject GoToLogInPage()
+        public AuthenticationPageObject GoToAuthenticationPage()
         {
             chromeDriver.FindElement(_signInButton).Click();
-
-            return new LogInMenuPageObject(chromeDriver);
+            return new AuthenticationPageObject(chromeDriver);
         }
     }
 }

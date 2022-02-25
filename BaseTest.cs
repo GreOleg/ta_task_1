@@ -17,19 +17,19 @@ namespace ta_task_1
         [OneTimeTearDown]
         protected void DoAfterAllTheTests()
         {
-
+            _webDriver.Quit();
         }
 
         [TearDown]
-
         protected void DoAfterEach()
         {
-            _webDriver.Quit();
+            //_webDriver.Quit();
         }
 
         [SetUp]
         protected void DoBeforEach()
         {
+            //_webDriver = new ChromeDriver();
             _webDriver.Manage().Cookies.DeleteAllCookies();
             _webDriver.Navigate().GoToUrl(TestSettings.HostPrefix);
             _webDriver.Manage().Window.Maximize();

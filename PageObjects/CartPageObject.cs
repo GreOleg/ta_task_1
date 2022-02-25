@@ -2,7 +2,7 @@
 
 namespace ta_task_1.PageObjects
 {
-    internal class CartPageObject
+    class CartPageObject
     {
         private IWebDriver chromeDriver;
 
@@ -15,14 +15,11 @@ namespace ta_task_1.PageObjects
             this.chromeDriver = chromeDriver;
         }
 
-        public CartPageObject CheckingItemsInCart()
+        public CartPageObject AssertItemsInCart()
         {
             WaitUntil.WaitElement(chromeDriver, _cartTitle);
-
-            Checks.CheckElementDisplyed(chromeDriver, _chiffonDressInCart);
-
-            Checks.CheckElementDisplyed(chromeDriver, _fadedSleeveInCart);
-
+            Asserts.CheckElementDisplyed(chromeDriver, _chiffonDressInCart);
+            Asserts.CheckElementDisplyed(chromeDriver, _fadedSleeveInCart);
             return new CartPageObject(chromeDriver);
         }
     }

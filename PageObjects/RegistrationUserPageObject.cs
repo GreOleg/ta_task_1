@@ -1,9 +1,10 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using System.Collections.Generic;
 
 namespace ta_task_1.PageObjects
 {
-    internal class RegistrationUserPageObject
+    class RegistrationUserPageObject
     {
         private IWebDriver chromeDriver;
 
@@ -28,51 +29,23 @@ namespace ta_task_1.PageObjects
             this.chromeDriver = chromeDriver;
         }
 
-        public MyAccountPageObject RegistrationUser(
-            string firstName, 
-            string lastName,
-            string password,
-            string dayBirthValue,
-            string monthBirthValue,
-            string yearBirthValue,
-            string address,
-            string city,
-            string state,
-            string posteCode,
-            string mobilePhone
-            )
+        public MyAccountPageObject RegistrationUser(Dictionary<string, string> user)
         {
-
             WaitUntil.WaitElement(chromeDriver, _createAnAccountFormPersonalInformationForm);
-
             chromeDriver.FindElement(_createAnAccountFormPersonalInformationTitleRadio).Click();
-
-            chromeDriver.FindElement(_createAnAccountFormPersonalInformationFirstName).SendKeys(firstName);
-
-            chromeDriver.FindElement(_createAnAccountFormPersonalInformationLastName).SendKeys(lastName);
-
-            chromeDriver.FindElement(_createAnAccountFormPersonalInformationPasswword).SendKeys(password);
-
-            new SelectElement(chromeDriver.FindElement(_createAnAccountFormPersonalInformationDateOfBirthDay)).SelectByValue(dayBirthValue);
-
-            new SelectElement(chromeDriver.FindElement(_createAnAccountFormPersonalInformationDateOfBirthMonth)).SelectByValue(monthBirthValue);
-
-            new SelectElement(chromeDriver.FindElement(_createAnAccountFormPersonalInformationDateOfBirthYear)).SelectByValue(yearBirthValue);
-
+            chromeDriver.FindElement(_createAnAccountFormPersonalInformationFirstName).SendKeys(user["firstNameUser"]);
+            chromeDriver.FindElement(_createAnAccountFormPersonalInformationLastName).SendKeys(user["lastNameUser"]);
+            chromeDriver.FindElement(_createAnAccountFormPersonalInformationPasswword).SendKeys(user["passwordUser"]);
+            new SelectElement(chromeDriver.FindElement(_createAnAccountFormPersonalInformationDateOfBirthDay)).SelectByValue(user["dayBirthUser"]);
+            new SelectElement(chromeDriver.FindElement(_createAnAccountFormPersonalInformationDateOfBirthMonth)).SelectByValue(user["monthBirthUser"]);
+            new SelectElement(chromeDriver.FindElement(_createAnAccountFormPersonalInformationDateOfBirthYear)).SelectByValue(user["yearBirthUser"]);
             chromeDriver.FindElement(_createAnAccountFormPersonalInformationCheckboxNewsletter).Click();
-
-            chromeDriver.FindElement(_createAnAccountFormYourAddressAddress).SendKeys(address);
-
-            chromeDriver.FindElement(_createAnAccountFormYourAddressCity).SendKeys(city);
-
-            new SelectElement(chromeDriver.FindElement(_createAnAccountFormYourAddressState)).SelectByValue(state);
-
-            chromeDriver.FindElement(_createAnAccountFormYourAddressPostCode).SendKeys(posteCode);
-
-            chromeDriver.FindElement(_createAnAccountFormYourAddressMobilePhone).SendKeys(mobilePhone);
-
+            chromeDriver.FindElement(_createAnAccountFormYourAddressAddress).SendKeys(user["addressUser"]);
+            chromeDriver.FindElement(_createAnAccountFormYourAddressCity).SendKeys(user["cityUser"]);
+            new SelectElement(chromeDriver.FindElement(_createAnAccountFormYourAddressState)).SelectByValue(user["stateUser"]);
+            chromeDriver.FindElement(_createAnAccountFormYourAddressPostCode).SendKeys(user["postCodeUser"]);
+            chromeDriver.FindElement(_createAnAccountFormYourAddressMobilePhone).SendKeys(user["mobilePhoneUser"]);
             chromeDriver.FindElement(_createAnAccountFormSubmitAccount).Click();
-
             return new MyAccountPageObject(chromeDriver);
         }
     }

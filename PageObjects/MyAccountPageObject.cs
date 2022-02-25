@@ -1,9 +1,9 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Interactions;
+using ta_task_1.Helper;
 
 namespace ta_task_1.PageObjects
 {
-    internal class MyAccountPageObject
+    class MyAccountPageObject
     {
         private IWebDriver chromeDriver;
 
@@ -16,20 +16,17 @@ namespace ta_task_1.PageObjects
             this.chromeDriver = chromeDriver;
         }
 
-        public SummerDressesPageObject ChoiceOfClothes()
+        public SummerDressesPageObject GoToSummerDressesPage()
         {
-            new Actions(chromeDriver).MoveToElement(chromeDriver.FindElement(_topMenuDressLink)).Perform();
-
+            ActionEvent.MoseOver(chromeDriver, _topMenuDressLink);
             WaitUntil.WaitElement(chromeDriver, _popUpMenuSummerDresses);
             chromeDriver.FindElement(_popUpMenuSummerDresses).Click();
-
             return new SummerDressesPageObject(chromeDriver);
         }
 
         //public LogInMenuPageObject SignOut()
         //{
         //    chromeDriver.FindElement(_signOutButton).Click();
-
         //    return new LogInMenuPageObject(chromeDriver);
         //}
     }

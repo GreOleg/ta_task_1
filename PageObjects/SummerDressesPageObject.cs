@@ -2,7 +2,7 @@
 
 namespace ta_task_1.PageObjects
 {
-    internal class SummerDressesPageObject
+    class SummerDressesPageObject
     {
         private IWebDriver chromeDriver;
 
@@ -14,13 +14,11 @@ namespace ta_task_1.PageObjects
             this.chromeDriver = chromeDriver;
         }
 
-        public SearchDressPageObject SelectionOfSummerDresses(string searchValue)
+        public DressSearchResultPageObject EnterKeyWordToSearcFiald(string searchValue)
         {
             chromeDriver.FindElement(_searchTopInput).SendKeys(searchValue);
-
             chromeDriver.FindElement(_searchSubmitButton).Click();
-
-            return new SearchDressPageObject(chromeDriver);
+            return new DressSearchResultPageObject(chromeDriver);
         }
     }
 }
