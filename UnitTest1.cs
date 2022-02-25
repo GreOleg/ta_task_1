@@ -12,7 +12,6 @@ namespace ta_task_1
         public void Test_1()
         {              
             var mainPage = new MainPageObject(_webDriver);
-
             mainPage
                 .GoToAuthenticationPage()
                 .EnterUserEmail(Generaters.GenerateRandomEmail(TestUserData.domenForUserEmail))
@@ -22,32 +21,24 @@ namespace ta_task_1
                 .AddDressesToCart()
                 .AssertItemsInCart();          
         }
-
         [Test]
         public void Test_2()
         {
             var mainPage = new MainPageObject(_webDriver);
             mainPage.GoToAuthenticationPage();
-
             var authenticationPage = new AuthenticationPageObject(_webDriver);
             authenticationPage.EnterUserEmail(Generaters.GenerateRandomEmail(TestUserData.domenForUserEmail));
-
             var registrationUserPage = new RegistrationUserPageObject(_webDriver);
             registrationUserPage.RegistrationUser(TestUserData.userData);
-
             var myAccountPageObject = new MyAccountPageObject(_webDriver);
             myAccountPageObject.GoToSummerDressesPage();
-
             var summerDressesPageObject = new SummerDressesPageObject(_webDriver);
             summerDressesPageObject.EnterKeyWordToSearcFiald(TestUserData.SearchKeyword);
-
             var dressSearchResultsPageObject = new DressSearchResultPageObject(_webDriver);
             dressSearchResultsPageObject.AddDressesToCart();
-
             var cartPageObject = new CartPageObject(_webDriver);
             cartPageObject.AssertItemsInCart();
         }
-
         [Test]
         public void Test_3()
         {

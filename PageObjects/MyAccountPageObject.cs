@@ -7,8 +7,8 @@ namespace ta_task_1.PageObjects
     {
         private IWebDriver chromeDriver;
 
-        private readonly By _topMenuDressLink = By.XPath("//div[@id='block_top_menu']/ul/li[2]/a");
-        private readonly By _popUpMenuSummerDresses = By.XPath("(//a[@title='Summer Dresses'][normalize-space()='Summer Dresses'])[2]");
+        private readonly By _topMenuDressLink = By.XPath("//div[@id='block_top_menu']/ul/li/a[@title='Dresses']");
+        private readonly By _popUpMenuSummerDresses = By.XPath("(//a[@title='Summer Dresses'][normalize-space()='Summer Dresses'])[position()='2']");
         //private readonly By _signOutButton = By.XPath("//a[@title='Log me out']");
 
         public MyAccountPageObject(IWebDriver chromeDriver)
@@ -18,7 +18,7 @@ namespace ta_task_1.PageObjects
 
         public SummerDressesPageObject GoToSummerDressesPage()
         {
-            ActionEvent.MoseOver(chromeDriver, _topMenuDressLink);
+            ActionEvent.MouseOver(chromeDriver, _topMenuDressLink);
             WaitUntil.WaitElement(chromeDriver, _popUpMenuSummerDresses);
             chromeDriver.FindElement(_popUpMenuSummerDresses).Click();
             return new SummerDressesPageObject(chromeDriver);
