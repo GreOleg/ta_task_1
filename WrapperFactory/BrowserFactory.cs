@@ -13,6 +13,8 @@ namespace ta_task_1.WrapperFactory
         {
             get
             {
+                if (driver == null)
+                    throw new NullReferenceException("The WebDriver browser instance was not initialized. You should first call the method InitBrowser.");
                 return driver;
             }
             private set
@@ -26,16 +28,16 @@ namespace ta_task_1.WrapperFactory
             switch (browserName)
             {
                 case "Firefox":
-                    if (Driver == null)
+                    if (driver == null)
                     {
-                        driver = new FirefoxDriver();
+                        Driver = new FirefoxDriver();
                     }
                     break;
 
                 case "Chrome":
-                    if (Driver == null)
+                    if (driver == null)
                     {
-                        driver = new ChromeDriver();
+                        Driver = new ChromeDriver();
                     }
                     break;
             }
