@@ -1,40 +1,37 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using ta_task_1.WrapperFactory;
 
 namespace ta_task_1
 {
-    public class BaseTest
+    public class BaseTest 
     {
-        protected IWebDriver _webDriver;
+        private IWebDriver driver = BrowserFactory.Driver;
 
         [OneTimeSetUp]
         protected void DoBeforAllTheTests()
         {
-            _webDriver = new ChromeDriver();
         }
 
         [OneTimeTearDown]
         protected void DoAfterAllTheTests()
         {
-            _webDriver.Quit();
         }
 
         [TearDown]
         protected void DoAfterEach()
         {
-            //_webDriver.Quit();
+            BrowserFactory.CloseAllDrivers();
         }
 
         [SetUp]
         protected void DoBeforEach()
         {
-            //_webDriver = new ChromeDriver();
-            _webDriver.Manage().Cookies.DeleteAllCookies();
-            _webDriver.Navigate().GoToUrl(TestSettings.HostPrefix);
-            _webDriver.Manage().Window.Maximize();
+            BrowserFactory.InitBrowser("Chrome");
+            BrowserFactory.LoadApplication(TestSettings.HostPrefix);
 
-            WaitUntil.ShouldLocate(_webDriver, TestSettings.LocationAutomationpractice);
+            WaitUntil.ShouldLocate(driver, TestSettings.LocationAutomationpractice);
         }
     }
 }

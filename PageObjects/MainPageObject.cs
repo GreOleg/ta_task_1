@@ -1,21 +1,18 @@
 ﻿using OpenQA.Selenium;
+using SeleniumExtras.PageObjects;
+using ta_task_1.WrapperFactory;
 
 namespace ta_task_1.PageObjects
 {
     class MainPageObject
     {
-        private IWebDriver chromeDriver;
+        private IWebDriver driver = BrowserFactory.Driver;
 
-        private readonly By _signInButton = By.CssSelector("a.login");
-
-        public MainPageObject(IWebDriver chromeDriver)
+        [FindsBy(How = How.CssSelector, Using = "a.login")]
+        private IWebElement _signInButton { get; set; }
+        public void GoToAuthenticationPage()
         {
-            this.chromeDriver = chromeDriver;
-        }
-        public AuthenticationPageObject GoToAuthenticationPage()
-        {
-            chromeDriver.FindElement(_signInButton).Click();
-            return new AuthenticationPageObject(chromeDriver);
+            _signInButton.Click();
         }
     }
 }

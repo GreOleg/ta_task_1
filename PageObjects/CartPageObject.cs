@@ -1,26 +1,31 @@
 ﻿using OpenQA.Selenium;
+using SeleniumExtras.PageObjects;
+using ta_task_1.WrapperFactory;
 
 namespace ta_task_1.PageObjects
 {
     class CartPageObject
     {
-        private IWebDriver chromeDriver;
+        private IWebDriver driver = BrowserFactory.Driver;
 
-        private readonly By _cartTitle = By.XPath("//h1[@id='cart_title']");
-        private readonly By _chiffonDressInCart = By.XPath("//a[normalize-space()='Printed Chiffon Dress']");
-        private readonly By _fadedSleeveInCart = By.XPath("//td[@class='cart_description']//a[contains(text(),'Faded Short Sleeve T-shirts')]");
+        [FindsBy(How = How.XPath, Using = "//h1[@id='cart_title']")]
+        private IWebElement _cartTitle { get; set; }
 
-        public CartPageObject(IWebDriver chromeDriver)
+        [FindsBy(How = How.XPath, Using = "//a[normalize-space()='Printed Chiffon Dress']")]
+        private IWebElement _chiffonDressInCart { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "//td[@class='cart_description']//a[contains(text(),'Faded Short Sleeve T-shirts')]")]
+        private IWebElement _fadedSleeveInCart { get; set; }
+
+        public void AssertChiffonDressInCart()
         {
-            this.chromeDriver = chromeDriver;
+            WaitUntil.ExpectedConditionsWaitElement(driver, _cartTitle);
+            Asserts.CheckElementDisplyed(_chiffonDressInCart);
         }
-
-        public CartPageObject AssertItemsInCart()
+        public void AssertFadedSleeveShirtInCart()
         {
-            WaitUntil.WaitElement(chromeDriver, _cartTitle);
-            Asserts.CheckElementDisplyed(chromeDriver, _chiffonDressInCart);
-            Asserts.CheckElementDisplyed(chromeDriver, _fadedSleeveInCart);
-            return new CartPageObject(chromeDriver);
+            WaitUntil.ExpectedConditionsWaitElement(driver, _cartTitle);
+            Asserts.CheckElementDisplyed(_fadedSleeveInCart);
         }
     }
 }

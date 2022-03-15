@@ -1,52 +1,77 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.PageObjects;
 using System.Collections.Generic;
+using ta_task_1.WrapperFactory;
 
 namespace ta_task_1.PageObjects
 {
     class RegistrationUserPageObject
     {
-        private IWebDriver chromeDriver;
+        private IWebDriver driver = BrowserFactory.Driver;
 
-        private readonly By _createAnAccountFormPersonalInformationForm = By.CssSelector("form#account-creation_form");
-        private readonly By _createAnAccountFormPersonalInformationTitleRadio = By.CssSelector("input#id_gender1");
-        private readonly By _createAnAccountFormPersonalInformationFirstName = By.CssSelector("input#customer_firstname");
-        private readonly By _createAnAccountFormPersonalInformationLastName = By.CssSelector("input#customer_lastname");
-        private readonly By _createAnAccountFormPersonalInformationPasswword = By.CssSelector("input#passwd");
-        private readonly By _createAnAccountFormPersonalInformationDateOfBirthDay = By.CssSelector("select#days");
-        private readonly By _createAnAccountFormPersonalInformationDateOfBirthMonth = By.CssSelector("select#months");
-        private readonly By _createAnAccountFormPersonalInformationDateOfBirthYear = By.CssSelector("select#years");
-        private readonly By _createAnAccountFormPersonalInformationCheckboxNewsletter = By.CssSelector("input#newsletter");
-        private readonly By _createAnAccountFormYourAddressAddress = By.CssSelector("input#address1");
-        private readonly By _createAnAccountFormYourAddressCity = By.CssSelector("input#city");
-        private readonly By _createAnAccountFormYourAddressState = By.CssSelector("select#id_state");
-        private readonly By _createAnAccountFormYourAddressPostCode = By.CssSelector("input#postcode");
-        private readonly By _createAnAccountFormYourAddressMobilePhone = By.CssSelector("input#phone_mobile");
-        private readonly By _createAnAccountFormSubmitAccount = By.CssSelector("button#submitAccount");
+        [FindsBy(How = How.CssSelector, Using = "form#account-creation_form")]
+        private IWebElement _createAnAccountFormPersonalInformationForm { get; set; }
 
-        public RegistrationUserPageObject(IWebDriver chromeDriver)
+        [FindsBy(How = How.CssSelector, Using = "input#id_gender1")]
+        private IWebElement _createAnAccountFormPersonalInformationTitleRadio { get; set; }
+
+        [FindsBy(How = How.CssSelector, Using = "input#customer_firstname")]
+        private IWebElement _createAnAccountFormPersonalInformationFirstName { get; set; }
+
+        [FindsBy(How = How.CssSelector, Using = "input#customer_lastname")]
+        private IWebElement _createAnAccountFormPersonalInformationLastName { get; set; }
+
+        [FindsBy(How = How.CssSelector, Using = "input#passwd")]
+        private IWebElement _createAnAccountFormPersonalInformationPasswword { get; set; }
+
+        [FindsBy(How = How.CssSelector, Using = "select#days")]
+        private IWebElement _createAnAccountFormPersonalInformationDateOfBirthDay { get; set; }
+
+        [FindsBy(How = How.CssSelector, Using = "select#months")]
+        private IWebElement _createAnAccountFormPersonalInformationDateOfBirthMonth { get; set; }
+
+        [FindsBy(How = How.CssSelector, Using = "select#years")]
+        private IWebElement _createAnAccountFormPersonalInformationDateOfBirthYear { get; set; }
+
+        [FindsBy(How = How.CssSelector, Using = "input#newsletter")]
+        private IWebElement _createAnAccountFormPersonalInformationCheckboxNewsletter { get; set; }
+
+        [FindsBy(How = How.CssSelector, Using = "input#address1")]
+        private IWebElement _createAnAccountFormYourAddressAddress { get; set; }
+
+        [FindsBy(How = How.CssSelector, Using = "input#city")]
+        private IWebElement _createAnAccountFormYourAddressCity { get; set; }
+
+        [FindsBy(How = How.CssSelector, Using = "select#id_state")]
+        private IWebElement _createAnAccountFormYourAddressState { get; set; }
+
+        [FindsBy(How = How.CssSelector, Using = "input#postcode")]
+        private IWebElement _createAnAccountFormYourAddressPostCode { get; set; }
+
+        [FindsBy(How = How.CssSelector, Using = "input#phone_mobile")]
+        private IWebElement _createAnAccountFormYourAddressMobilePhone { get; set; }
+
+        [FindsBy(How = How.CssSelector, Using = "button#submitAccount")]
+        private IWebElement _createAnAccountFormSubmitAccount { get; set; }
+
+        public void RegistrationUser(Dictionary<string, string> user)
         {
-            this.chromeDriver = chromeDriver;
-        }
-
-        public MyAccountPageObject RegistrationUser(Dictionary<string, string> user)
-        {
-            WaitUntil.WaitElement(chromeDriver, _createAnAccountFormPersonalInformationForm);
-            chromeDriver.FindElement(_createAnAccountFormPersonalInformationTitleRadio).Click();
-            chromeDriver.FindElement(_createAnAccountFormPersonalInformationFirstName).SendKeys(user["firstNameUser"]);
-            chromeDriver.FindElement(_createAnAccountFormPersonalInformationLastName).SendKeys(user["lastNameUser"]);
-            chromeDriver.FindElement(_createAnAccountFormPersonalInformationPasswword).SendKeys(user["passwordUser"]);
-            new SelectElement(chromeDriver.FindElement(_createAnAccountFormPersonalInformationDateOfBirthDay)).SelectByValue(user["dayBirthUser"]);
-            new SelectElement(chromeDriver.FindElement(_createAnAccountFormPersonalInformationDateOfBirthMonth)).SelectByValue(user["monthBirthUser"]);
-            new SelectElement(chromeDriver.FindElement(_createAnAccountFormPersonalInformationDateOfBirthYear)).SelectByValue(user["yearBirthUser"]);
-            chromeDriver.FindElement(_createAnAccountFormPersonalInformationCheckboxNewsletter).Click();
-            chromeDriver.FindElement(_createAnAccountFormYourAddressAddress).SendKeys(user["addressUser"]);
-            chromeDriver.FindElement(_createAnAccountFormYourAddressCity).SendKeys(user["cityUser"]);
-            new SelectElement(chromeDriver.FindElement(_createAnAccountFormYourAddressState)).SelectByValue(user["stateUser"]);
-            chromeDriver.FindElement(_createAnAccountFormYourAddressPostCode).SendKeys(user["postCodeUser"]);
-            chromeDriver.FindElement(_createAnAccountFormYourAddressMobilePhone).SendKeys(user["mobilePhoneUser"]);
-            chromeDriver.FindElement(_createAnAccountFormSubmitAccount).Click();
-            return new MyAccountPageObject(chromeDriver);
+            WaitUntil.ExpectedConditionsWaitElement(driver, _createAnAccountFormPersonalInformationForm);
+            _createAnAccountFormPersonalInformationTitleRadio.Click();
+            _createAnAccountFormPersonalInformationFirstName.SendKeys(user["firstNameUser"]);
+            _createAnAccountFormPersonalInformationLastName.SendKeys(user["lastNameUser"]);
+            _createAnAccountFormPersonalInformationPasswword.SendKeys(user["passwordUser"]);
+            new SelectElement(_createAnAccountFormPersonalInformationDateOfBirthDay).SelectByValue(user["dayBirthUser"]);
+            new SelectElement(_createAnAccountFormPersonalInformationDateOfBirthMonth).SelectByValue(user["monthBirthUser"]);
+            new SelectElement(_createAnAccountFormPersonalInformationDateOfBirthYear).SelectByValue(user["yearBirthUser"]);
+            _createAnAccountFormPersonalInformationCheckboxNewsletter.Click();
+            _createAnAccountFormYourAddressAddress.SendKeys(user["addressUser"]);
+            _createAnAccountFormYourAddressCity.SendKeys(user["cityUser"]);
+            new SelectElement(_createAnAccountFormYourAddressState).SelectByValue(user["stateUser"]);
+            _createAnAccountFormYourAddressPostCode.SendKeys(user["postCodeUser"]);
+            _createAnAccountFormYourAddressMobilePhone.SendKeys(user["mobilePhoneUser"]);
+            _createAnAccountFormSubmitAccount.Click();
         }
     }
 }

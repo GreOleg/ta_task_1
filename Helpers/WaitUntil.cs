@@ -25,14 +25,8 @@ namespace ta_task_1
             Task.Delay(TimeSpan.FromSeconds(seconds)).Wait();
         }
 
-        public static void WaitElement(IWebDriver webDriver, By locator, int seconds = 20)
+        public static void ExpectedConditionsWaitElement(IWebDriver webDriver, IWebElement locator, int seconds = 20)
         {
-            new WebDriverWait(webDriver, TimeSpan.FromSeconds(seconds)).Until(e => e.FindElement(locator));
-        }
-
-        public static void ExpectedConditionsWaitElement(IWebDriver webDriver, By locator, int seconds = 20)
-        {
-            new WebDriverWait(webDriver, TimeSpan.FromSeconds(seconds)).Until(ExpectedConditions.ElementIsVisible(locator));
             new WebDriverWait(webDriver, TimeSpan.FromSeconds(seconds)).Until(ExpectedConditions.ElementToBeClickable(locator));
         }
     }

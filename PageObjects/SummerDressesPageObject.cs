@@ -1,24 +1,22 @@
 ﻿using OpenQA.Selenium;
+using SeleniumExtras.PageObjects;
+using ta_task_1.WrapperFactory;
 
 namespace ta_task_1.PageObjects
 {
     class SummerDressesPageObject
     {
-        private IWebDriver chromeDriver;
+        private IWebDriver driver = BrowserFactory.Driver;
 
-        private readonly By _searchTopInput = By.XPath("//input[@id='search_query_top']");
-        private readonly By _searchSubmitButton = By.XPath("//button[@name='submit_search']");
+        [FindsBy(How = How.XPath, Using = "//input[@id='search_query_top']")]
+        private IWebElement _searchTopInput { get; set; }
 
-        public SummerDressesPageObject(IWebDriver chromeDriver)
+        [FindsBy(How = How.XPath, Using = "//button[@name='submit_search']")]
+        private IWebElement _searchSubmitButton { get; set; }
+        public void EnterKeyWordToSearcFiald(string searchValue)
         {
-            this.chromeDriver = chromeDriver;
-        }
-
-        public DressSearchResultPageObject EnterKeyWordToSearcFiald(string searchValue)
-        {
-            chromeDriver.FindElement(_searchTopInput).SendKeys(searchValue);
-            chromeDriver.FindElement(_searchSubmitButton).Click();
-            return new DressSearchResultPageObject(chromeDriver);
+            _searchTopInput.SendKeys(searchValue);
+            _searchSubmitButton.Click();
         }
     }
 }

@@ -1,39 +1,30 @@
 ﻿using OpenQA.Selenium;
+using SeleniumExtras.PageObjects;
+using ta_task_1.WrapperFactory;
 
 namespace ta_task_1.PageObjects
 {
     class AuthenticationPageObject
     {
-        private IWebDriver chromeDriver;
+        private IWebDriver driver = BrowserFactory.Driver;
 
-        private readonly By _createAnAccountForm = By.CssSelector("form#create-account_form");
-        private readonly By _createAnAccountFormEmailInput = By.CssSelector("input#email_create");
-        private readonly By _createAnAccountButton = By.CssSelector("button[name='SubmitCreate']");
-        //private readonly By _createAccountError = By.XPath("//div[@id='create_account_error']");
-        //private readonly By _signInFormEmailInput = By.CssSelector("input#email");
-        //private readonly By _signInFormPasswordInput = By.CssSelector("input#passwd");
-        //private readonly By _signInFormSubmitButton = By.CssSelector("button#SubmitLogin");
+        [FindsBy(How = How.CssSelector, Using = "form#create-account_form")]
+        private IWebElement _createAnAccountForm { get; set; }
 
-        public AuthenticationPageObject(IWebDriver chromeDriver)
+        [FindsBy(How = How.CssSelector, Using = "input#email_create")]
+        private IWebElement _createAnAccountFormEmailInput { get; set; }
+
+        [FindsBy(How = How.CssSelector, Using = "button[name='SubmitCreate']")]
+        private IWebElement _createAnAccountButton { get; set; }
+
+        public void EnterUserEmail(string testEmail)
         {
-            this.chromeDriver = chromeDriver;
+            WaitUntil.ExpectedConditionsWaitElement(driver, _createAnAccountForm);
+            _createAnAccountFormEmailInput.SendKeys(testEmail);
         }
-
-        //public MyAccountPageObject LogIn(string email, string password)
-        //{
-        //    chromeDriver.FindElement(_signInFormEmailInput).SendKeys(email);
-        //    chromeDriver.FindElement(_signInFormPasswordInput).SendKeys(password);
-        //    chromeDriver.FindElement(_signInFormSubmitButton).Click();
-        //    return new MyAccountPageObject(chromeDriver);
-        //}
-
-        public RegistrationUserPageObject EnterUserEmail(string email)
+        public void GoToRegistrationUserPage()
         {
-            WaitUntil.WaitElement(chromeDriver, _createAnAccountForm);
-            chromeDriver.FindElement(_createAnAccountFormEmailInput).SendKeys(email);
-            chromeDriver.FindElement(_createAnAccountButton).Click();
-            //WaitUntil.WaitElement(chromeDriver, _createAccountError);
-            return new RegistrationUserPageObject(chromeDriver);
+            _createAnAccountButton.Click();
         }
     }
 }

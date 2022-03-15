@@ -1,35 +1,49 @@
 ﻿using OpenQA.Selenium;
+using SeleniumExtras.PageObjects;
 using ta_task_1.Helper;
+using ta_task_1.WrapperFactory;
 
 namespace ta_task_1.PageObjects
 {
     class DressSearchResultPageObject
     {
-        private IWebDriver chromeDriver;
+        private IWebDriver driver = BrowserFactory.Driver;
 
-        private readonly By _textUnderChiffonDressCard = By.CssSelector("h5[itemprop='name'] a[title='Printed Chiffon Dress']");
-        private readonly By _addChiffonDressButton = By.XPath("//div[@class='button-container']//a[@data-id-product='7']/span[contains(text(),'Add to cart')]");
-        private readonly By _continueShoppingButton = By.XPath("//span[@title='Continue shopping']//i");
-        private readonly By _textUnderFadedSleeveCard = By.CssSelector("h5[itemprop='name'] a[title='Faded Short Sleeve T-shirts']");
-        private readonly By _addFadedSleeveButton = By.XPath("//div[@class='button-container']//a[@data-id-product='1']/span[contains(text(),'Add to cart')]");
-        private readonly By _proceedToCheckoutButton = By.XPath("//a[@title='Proceed to checkout']");
+        [FindsBy(How = How.CssSelector, Using = "h5[itemprop='name'] a[title='Printed Chiffon Dress']")]
+        private IWebElement _textUnderChiffonDressCard { get; set; }
 
-        public DressSearchResultPageObject(IWebDriver chromeDriver)
+        [FindsBy(How = How.XPath, Using = "//div[@class='button-container']//a[@data-id-product='7']/span[contains(text(),'Add to cart')]")]
+        private IWebElement _addChiffonDressButton { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "//span[@title='Continue shopping']//i")]
+        private IWebElement _continueShoppingButton { get; set; }
+
+        [FindsBy(How = How.CssSelector, Using = "h5[itemprop='name'] a[title='Faded Short Sleeve T-shirts']")]
+        private IWebElement _textUnderFadedSleeveCard { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "//div[@class='button-container']//a[@data-id-product='1']/span[contains(text(),'Add to cart')]")]
+        private IWebElement _addFadedSleeveButton { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "//a[@title='View my shopping cart']")]
+        private IWebElement _cartButton { get; set; }
+
+        public void AddChiffonDressToCart()
         {
-            this.chromeDriver = chromeDriver;
+            ActionEvent.MouseOver(driver, _textUnderChiffonDressCard);
+            _addChiffonDressButton.Click();
+            WaitUntil.ExpectedConditionsWaitElement(driver, _continueShoppingButton);
+            _continueShoppingButton.Click();
         }
-
-        public CartPageObject AddDressesToCart()
+        public void AddFadedSleeveShirtToCart()
         {
-            ActionEvent.MouseOver(chromeDriver, _textUnderChiffonDressCard);
-            chromeDriver.FindElement(_addChiffonDressButton).Click();
-            WaitUntil.ExpectedConditionsWaitElement(chromeDriver, _continueShoppingButton);
-            chromeDriver.FindElement(_continueShoppingButton).Click();
-            ActionEvent.MouseOver(chromeDriver, _textUnderFadedSleeveCard);
-            chromeDriver.FindElement(_addFadedSleeveButton).Click();
-            WaitUntil.ExpectedConditionsWaitElement(chromeDriver, _proceedToCheckoutButton);
-            chromeDriver.FindElement(_proceedToCheckoutButton).Click();         
-            return new CartPageObject(chromeDriver);
+            ActionEvent.MouseOver(driver, _textUnderFadedSleeveCard);
+            _addFadedSleeveButton.Click();
+            WaitUntil.ExpectedConditionsWaitElement(driver, _continueShoppingButton);
+            _continueShoppingButton.Click();
+        }
+        public void GoToCart()
+        {
+            _cartButton.Click();
         }
     }
 }
