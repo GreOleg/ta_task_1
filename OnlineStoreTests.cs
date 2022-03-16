@@ -12,7 +12,7 @@ namespace ta_task_1
         [Test]
         public void AddDressesToCartTest()
         {          
-            BrowserFactory.InitBrowser(WebBrowsers.Chrome);
+            BrowserFactory.InitBrowser(WebBrowsers.ChromeHeadlessMode);
             BrowserFactory.LoadApplication(TestSettings.HostPrefix);
             
             Page.MainPage.GoToAuthenticationPage();

@@ -4,6 +4,7 @@
     {
         Chrome,
         CromeIncognitoMode,
+        ChromeHeadlessMode,
         Firefox
     }
 }

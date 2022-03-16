@@ -49,6 +49,15 @@ namespace ta_task_1.WrapperFactory
                         Driver = new ChromeDriver(chromeOptions);
                     }
                     break;
+
+                case WebBrowsers.ChromeHeadlessMode:
+                    if (driver == null)
+                    {
+                        ChromeOptions chromeOptions = new ChromeOptions();
+                        chromeOptions.AddArgument("--headless");
+                        Driver = new ChromeDriver(chromeOptions);
+                    }
+                    break;
             }
         }
 
