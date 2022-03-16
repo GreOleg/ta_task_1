@@ -23,21 +23,30 @@ namespace ta_task_1.WrapperFactory
             }
         }
 
-        public static void InitBrowser(string browserName)
+        public static void InitBrowser(WebBrowsers browserName)
         {
             switch (browserName)
             {
-                case "Firefox":
+                case WebBrowsers.Firefox:
                     if (driver == null)
                     {
                         Driver = new FirefoxDriver();
                     }
                     break;
 
-                case "Chrome":
+                case WebBrowsers.Chrome:
                     if (driver == null)
-                    {
+                    {   
                         Driver = new ChromeDriver();
+                    }
+                    break;
+
+                case WebBrowsers.CromeIncognitoMode:
+                    if (driver == null)
+                    {   
+                        ChromeOptions chromeOptions = new ChromeOptions();
+                        chromeOptions.AddArgument("--incognito");
+                        Driver = new ChromeDriver(chromeOptions);
                     }
                     break;
             }
@@ -48,12 +57,12 @@ namespace ta_task_1.WrapperFactory
             Driver.Navigate().GoToUrl(url);
             Driver.Manage().Cookies.DeleteAllCookies();
             Driver.Manage().Window.Maximize();
+            ((IJavaScriptExecutor)Driver).ExecuteScript("document.body.style.zoom ='100%'");
             WaitUntil.ShouldLocate(driver, url);
         }
 
         public static void CloseAllDrivers()
         {
-             Driver.Close();
              Driver.Quit();           
         }
     }

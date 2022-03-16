@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
 using ta_task_1.Helper;
+using ta_task_1.Helpers;
 using ta_task_1.WrapperFactory;
 
 namespace ta_task_1.PageObjects
@@ -29,6 +30,7 @@ namespace ta_task_1.PageObjects
 
         public void AddChiffonDressToCart()
         {
+            Scroll.ScrollDown(driver, 0.650);
             ActionEvent.MouseOver(driver, _textUnderChiffonDressCard);
             _addChiffonDressButton.Click();
             WaitUntil.ExpectedConditionsWaitElement(driver, _continueShoppingButton);
@@ -36,6 +38,7 @@ namespace ta_task_1.PageObjects
         }
         public void AddFadedSleeveShirtToCart()
         {
+            Scroll.ScrollDown(driver, 0.650);
             ActionEvent.MouseOver(driver, _textUnderFadedSleeveCard);
             _addFadedSleeveButton.Click();
             WaitUntil.ExpectedConditionsWaitElement(driver, _continueShoppingButton);
