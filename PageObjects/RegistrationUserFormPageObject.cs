@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.PageObjects;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using ta_task_1.WrapperFactory;
 
 namespace ta_task_1.PageObjects
 {
-    class RegistrationUserPageObject
+    class RegistrationUserFormPageObject
     {
         private IWebDriver driver = BrowserFactory.Driver;
 
@@ -55,7 +56,7 @@ namespace ta_task_1.PageObjects
         [FindsBy(How = How.CssSelector, Using = "button#submitAccount")]
         private IWebElement _createAnAccountFormSubmitAccount { get; set; }
 
-        public void RegistrationUser(Dictionary<string, string> user)
+        public void RegistrationNewUser(Dictionary<string, string> user)
         {
             WaitUntil.ExpectedConditionsWaitElement(driver, _createAnAccountFormPersonalInformationForm);
             _createAnAccountFormPersonalInformationTitleRadio.Click();

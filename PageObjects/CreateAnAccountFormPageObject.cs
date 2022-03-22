@@ -4,7 +4,7 @@ using ta_task_1.WrapperFactory;
 
 namespace ta_task_1.PageObjects
 {
-    class AuthenticationPageObject
+    class CreateAnAccountFormPageObject
     {
         private IWebDriver driver = BrowserFactory.Driver;
 
@@ -17,13 +17,10 @@ namespace ta_task_1.PageObjects
         [FindsBy(How = How.CssSelector, Using = "button[name='SubmitCreate']")]
         private IWebElement _createAnAccountButton { get; set; }
 
-        public void EnterUserEmail(string testEmail)
+        public void SubmitCreateAnAcountForm(string testEmail)
         {
             WaitUntil.ExpectedConditionsWaitElement(driver, _createAnAccountForm);
             _createAnAccountFormEmailInput.SendKeys(testEmail);
-        }
-        public void GoToRegistrationUserPage()
-        {
             _createAnAccountButton.Click();
         }
     }

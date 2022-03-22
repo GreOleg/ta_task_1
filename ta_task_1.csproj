@@ -22,4 +22,10 @@
     <PackageReference Include="WebDriverManager" Version="2.12.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update=".runsettings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+    </None>
+  </ItemGroup>
+
 </Project>

@@ -1,4 +1,4 @@
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using ta_task_1.Helper;
 using ta_task_1.PageObjects;
 using ta_task_1.TestData;
@@ -7,18 +7,17 @@ using ta_task_1.WrapperFactory;
 namespace ta_task_1
 {
     [TestFixture]
-    public class OnlineStoreTests
+    [NonParallelizable]
+    public class OnlineStoreAddItemsToCartTest : BaseTest
     {
         [Test]
-        public void AddDressesToCartTest()
-        {          
-            BrowserFactory.InitBrowser(WebBrowsers.ChromeHeadlessMode);
-            BrowserFactory.LoadApplication(TestSettings.HostPrefix);
-            
+        public void AddItemsToCartTest()
+        {
+            //BrowserFactory.InitBrowser(WebBrowsers.Chrome);
+            //BrowserFactory.LoadApplication(TestSettings.BaseUrl);
+
             Page.MainPage.GoToAuthenticationPage();
-            Page.Authentication.EnterUserEmail(Generaters.GenerateRandomEmail(TestUserData.domenForUserEmail));
-            Page.Authentication.GoToRegistrationUserPage();
-            Page.Registration.RegistrationUser(TestUserData.userData);
+            Page.LogInForm.SubmitLogInForm("ivanov-3@example.com", "11111");
             Page.MyAccount.GoToSummerDressesPage();
             Page.SummerDressesPage.EnterKeyWordToSearcFiald(TestUserData.SearchKeyword);
             Page.DressSearchResultPage.AddChiffonDressToCart();
@@ -27,7 +26,7 @@ namespace ta_task_1
             Page.Cart.AssertChiffonDressInCart();
             Page.Cart.AssertFadedSleeveShirtInCart();
 
-            BrowserFactory.CloseAllDrivers();
+            //BrowserFactory.CloseAllDrivers();
         }
     }
 }

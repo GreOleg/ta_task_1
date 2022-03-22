@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+	<RunConfiguration>
+		<EnvironmentVariables>
+			<BROWSER>CHROME</BROWSER>
+			<BASE_URL>http://automationpractice.com</BASE_URL>
+		</EnvironmentVariables>
+	</RunConfiguration>
+</RunSettings>

@@ -16,13 +16,17 @@ namespace ta_task_1.PageObjects
         {
             get => GetPage<MainPageObject>();
         }
-        public static AuthenticationPageObject Authentication
+        public static CreateAnAccountFormPageObject CreateAnAccountForm
         {
-            get => GetPage<AuthenticationPageObject>();
+            get => GetPage<CreateAnAccountFormPageObject>();
         }
-        public static RegistrationUserPageObject Registration
+        public static LogInFormPageObject LogInForm
         {
-            get => GetPage<RegistrationUserPageObject>();
+            get => GetPage<LogInFormPageObject>();
+        }
+        public static RegistrationUserFormPageObject Registration
+        {
+            get => GetPage<RegistrationUserFormPageObject>();
         }
         public static MyAccountPageObject MyAccount
         {
