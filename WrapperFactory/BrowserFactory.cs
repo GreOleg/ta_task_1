@@ -74,7 +74,7 @@ namespace ta_task_1.WrapperFactory
 
             if (browserName == "FIREFOX") { Driver = new FirefoxDriver(); return; }
             if (browserName == "CHROME") { Driver = new ChromeDriver(); return; }
-            //Driver = new ChromeDriver();
+            Driver = new ChromeDriver();
         }
         public static void LoadApplication(string url)
         {   

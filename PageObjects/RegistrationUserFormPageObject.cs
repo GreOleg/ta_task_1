@@ -26,14 +26,14 @@ namespace ta_task_1.PageObjects
         [FindsBy(How = How.CssSelector, Using = "input#passwd")]
         private IWebElement _createAnAccountFormPersonalInformationPasswword { get; set; }
 
-        [FindsBy(How = How.CssSelector, Using = "select#days")]
-        private IWebElement _createAnAccountFormPersonalInformationDateOfBirthDay { get; set; }
+        //[FindsBy(How = How.CssSelector, Using = "select#days")]
+        //private IWebElement _createAnAccountFormPersonalInformationDateOfBirthDay { get; set; }
 
-        [FindsBy(How = How.CssSelector, Using = "select#months")]
-        private IWebElement _createAnAccountFormPersonalInformationDateOfBirthMonth { get; set; }
+        //[FindsBy(How = How.CssSelector, Using = "select#months")]
+        //private IWebElement _createAnAccountFormPersonalInformationDateOfBirthMonth { get; set; }
 
-        [FindsBy(How = How.CssSelector, Using = "select#years")]
-        private IWebElement _createAnAccountFormPersonalInformationDateOfBirthYear { get; set; }
+        //[FindsBy(How = How.CssSelector, Using = "select#years")]
+        //private IWebElement _createAnAccountFormPersonalInformationDateOfBirthYear { get; set; }
 
         [FindsBy(How = How.CssSelector, Using = "input#newsletter")]
         private IWebElement _createAnAccountFormPersonalInformationCheckboxNewsletter { get; set; }
@@ -63,9 +63,6 @@ namespace ta_task_1.PageObjects
             _createAnAccountFormPersonalInformationFirstName.SendKeys(user["firstNameUser"]);
             _createAnAccountFormPersonalInformationLastName.SendKeys(user["lastNameUser"]);
             _createAnAccountFormPersonalInformationPasswword.SendKeys(user["passwordUser"]);
-            new SelectElement(_createAnAccountFormPersonalInformationDateOfBirthDay).SelectByValue(user["dayBirthUser"]);
-            new SelectElement(_createAnAccountFormPersonalInformationDateOfBirthMonth).SelectByValue(user["monthBirthUser"]);
-            new SelectElement(_createAnAccountFormPersonalInformationDateOfBirthYear).SelectByValue(user["yearBirthUser"]);
             _createAnAccountFormPersonalInformationCheckboxNewsletter.Click();
             _createAnAccountFormYourAddressAddress.SendKeys(user["addressUser"]);
             _createAnAccountFormYourAddressCity.SendKeys(user["cityUser"]);

@@ -17,7 +17,7 @@ namespace ta_task_1
             //BrowserFactory.LoadApplication(TestSettings.BaseUrl);
             
             Page.MainPage.GoToAuthenticationPage();
-            Page.CreateAnAccountForm.SubmitCreateAnAcountForm(Generaters.GenerateRandomEmail(TestUserData.domenForUserEmail));
+            Page.CreateAnAccountForm.SubmitCreateAnAcountForm(Faker.Internet.Email());
             Page.Registration.RegistrationNewUser(TestUserData.userData);
 
             //BrowserFactory.CloseAllDrivers();
