@@ -19,7 +19,7 @@ namespace ta_task_1
             Page.MainPage.GoToAuthenticationPage();
             Page.LogInForm.SubmitLogInForm("ivanov-3@example.com", "11111");
             Page.MyAccount.GoToSummerDressesPage();
-            Page.SummerDressesPage.EnterKeyWordToSearcFiald(TestUserData.SearchKeyword);
+            Page.SummerDressesPage.EnterKeyWordToSearcFiald("dress");
             Page.DressSearchResultPage.AddChiffonDressToCart();
             Page.DressSearchResultPage.AddFadedSleeveShirtToCart();
             Page.DressSearchResultPage.GoToCart();

@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
+using ta_task_1.TestData;
 using ta_task_1.WrapperFactory;
 
 namespace ta_task_1.PageObjects
@@ -17,10 +18,10 @@ namespace ta_task_1.PageObjects
         [FindsBy(How = How.CssSelector, Using = "button[name='SubmitCreate']")]
         private IWebElement _createAnAccountButton { get; set; }
 
-        public void SubmitCreateAnAcountForm(string testEmail)
+        public void SubmitCreateAnAcountForm(Person person)
         {
             WaitUntil.ExpectedConditionsWaitElement(driver, _createAnAccountForm);
-            _createAnAccountFormEmailInput.SendKeys(testEmail);
+            _createAnAccountFormEmailInput.SendKeys(person.emailUser);
             _createAnAccountButton.Click();
         }
     }

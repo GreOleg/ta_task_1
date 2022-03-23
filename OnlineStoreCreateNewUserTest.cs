@@ -12,12 +12,12 @@ namespace ta_task_1
     {
         [Test]
         public void CreateNewUserTest()
-        {          
+        {
             //BrowserFactory.InitBrowser(WebBrowsers.Chrome);
             //BrowserFactory.LoadApplication(TestSettings.BaseUrl);
-            
+            var person = new Person();
             Page.MainPage.GoToAuthenticationPage();
-            Page.CreateAnAccountForm.SubmitCreateAnAcountForm(Faker.Internet.Email());
+            Page.CreateAnAccountForm.SubmitCreateAnAcountForm(person);
             Page.Registration.RegistrationNewUser(TestUserData.userData);
 
             //BrowserFactory.CloseAllDrivers();
