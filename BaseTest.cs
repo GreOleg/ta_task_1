@@ -16,7 +16,7 @@ namespace ta_task_1
         [OneTimeTearDown]
         protected void DoAfterAllTheTests()
         {
-            //BrowserFactory.CloseAllDrivers();
+            BrowserFactory.CloseAllDrivers();
         }
 
         [TearDown]

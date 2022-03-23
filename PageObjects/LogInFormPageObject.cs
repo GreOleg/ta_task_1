@@ -1,6 +1,5 @@
 ﻿using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
-using ta_task_1.WrapperFactory;
 
 namespace ta_task_1.PageObjects
 {

@@ -1,11 +1,4 @@
-﻿using OpenQA.Selenium;
-using SeleniumExtras.PageObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ta_task_1.WrapperFactory;
+﻿using ta_task_1.WrapperFactory;
 
 namespace ta_task_1.PageObjects
 {

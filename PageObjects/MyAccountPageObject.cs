@@ -14,11 +14,11 @@ namespace ta_task_1.PageObjects
 
         [FindsBy(How = How.XPath, Using = "(//a[@title='Summer Dresses'][normalize-space()='Summer Dresses'])[position()='2']")]
         private IWebElement _popUpMenuSummerDresses { get; set; }
-        //public void GoToSummerDressesPage()
-        //{
-        //    ActionEvent.MouseOver(driver, _topMenuDressLink);
-        //    WaitUntil.ExpectedConditionsWaitElement(driver, _popUpMenuSummerDresses);
-        //    _popUpMenuSummerDresses.Click();
-        //}
+        public void GoToSummerDressesPage()
+        {
+            ActionEvent.MouseOverBy(driver, _topMenuDressLink);
+            WaitUntil.ExpectedConditionsWaitElement(driver, _popUpMenuSummerDresses);
+            _popUpMenuSummerDresses.Click();
+        }
     }
 }
