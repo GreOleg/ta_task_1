@@ -9,5 +9,9 @@ namespace ta_task_1
         {
             Assert.IsTrue(locator.Displayed);
         }
+        public static void CheckText(IWebElement locator, string expextedText)
+        {
+            Assert.AreEqual(expextedText, locator.Text);
+        }
     }
 }

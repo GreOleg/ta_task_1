@@ -76,13 +76,12 @@ namespace ta_task_1.WrapperFactory
             if (browserName == "CHROME") { Driver = new ChromeDriver(); return; }
             Driver = new ChromeDriver();
         }
-        public static void LoadApplication(string url)
+        public static void PreconditionSetting()
         {   
-            Driver.Navigate().GoToUrl(url);
+            //Driver.Navigate().GoToUrl(url);
             Driver.Manage().Cookies.DeleteAllCookies();
             Driver.Manage().Window.Maximize();
             ((IJavaScriptExecutor)Driver).ExecuteScript("document.body.style.zoom ='100%'");
-            WaitUntil.ShouldLocate(driver, url);
         }
 
         public static void CloseAllDrivers()

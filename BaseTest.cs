@@ -7,8 +7,6 @@ namespace ta_task_1
 {
     public class BaseTest
     {
-        
-
         [OneTimeSetUp]
         protected void DoBeforAllTheTests()
         {
@@ -29,7 +27,7 @@ namespace ta_task_1
         [SetUp]
         protected void DoBeforEach()
         {
-            BrowserFactory.LoadApplication(Environment.GetEnvironmentVariable("BASE_URL"));
+            BrowserFactory.PreconditionSetting();
         }
     }
 }

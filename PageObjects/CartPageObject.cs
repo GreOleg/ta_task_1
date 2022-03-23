@@ -17,6 +17,8 @@ namespace ta_task_1.PageObjects
         [FindsBy(How = How.XPath, Using = "//td[@class='cart_description']//a[contains(text(),'Faded Short Sleeve T-shirts')]")]
         private IWebElement _fadedSleeveInCart { get; set; }
 
+        private IWebElement _itemInCart;
+
         public void AssertChiffonDressInCart()
         {
             WaitUntil.ExpectedConditionsWaitElement(driver, _cartTitle);
@@ -26,6 +28,13 @@ namespace ta_task_1.PageObjects
         {
             WaitUntil.ExpectedConditionsWaitElement(driver, _cartTitle);
             Asserts.CheckElementDisplyed(_fadedSleeveInCart);
+        }
+
+        public void AssertItemInCart(string item)
+        {
+            WaitUntil.ExpectedConditionsWaitElement(driver, _cartTitle);
+            _itemInCart = BrowserFactory.Driver.FindElement(By.XPath($"//td[@class='cart_description']//a[contains(text(),'{item}')]"));
+            Asserts.CheckText(_itemInCart, item);
         }
     }
 }

@@ -13,7 +13,7 @@ namespace ta_task_1.PageObjects
 
         [FindsBy(How = How.XPath, Using = "//button[@name='submit_search']")]
         private IWebElement _searchSubmitButton { get; set; }
-        public void EnterKeyWordToSearcFiald(string searchValue)
+        public void EnterKeyWordToSearcField(string searchValue)
         {
             _searchTopInput.SendKeys(searchValue);
             _searchSubmitButton.Click();

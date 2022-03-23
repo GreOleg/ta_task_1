@@ -18,10 +18,10 @@ namespace ta_task_1.PageObjects
         [FindsBy(How = How.CssSelector, Using = "button[name='SubmitCreate']")]
         private IWebElement _createAnAccountButton { get; set; }
 
-        public void SubmitCreateAnAcountForm(Person person)
+        public void SubmitCreateAnAcountForm(string userEmail)
         {
             WaitUntil.ExpectedConditionsWaitElement(driver, _createAnAccountForm);
-            _createAnAccountFormEmailInput.SendKeys(person.emailUser);
+            _createAnAccountFormEmailInput.SendKeys(userEmail);
             _createAnAccountButton.Click();
         }
     }

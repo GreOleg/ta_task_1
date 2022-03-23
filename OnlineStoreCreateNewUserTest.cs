@@ -15,10 +15,11 @@ namespace ta_task_1
         {
             //BrowserFactory.InitBrowser(WebBrowsers.Chrome);
             //BrowserFactory.LoadApplication(TestSettings.BaseUrl);
-            var person = new Person();
+            Navigation.GoTo(Pages.MainPage);
+
             Page.MainPage.GoToAuthenticationPage();
-            Page.CreateAnAccountForm.SubmitCreateAnAcountForm(person);
-            Page.Registration.RegistrationNewUser(TestUserData.userData);
+            Page.CreateAnAccountForm.SubmitCreateAnAcountForm(Faker.Internet.Email());
+            Page.Registration.SubmitNewUserForm(TestUserData.userData);
 
             //BrowserFactory.CloseAllDrivers();
         }

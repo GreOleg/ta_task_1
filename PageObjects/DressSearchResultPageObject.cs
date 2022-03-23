@@ -28,25 +28,38 @@ namespace ta_task_1.PageObjects
         [FindsBy(How = How.XPath, Using = "//a[@title='View my shopping cart']")]
         private IWebElement _cartButton { get; set; }
 
-        public void AddChiffonDressToCart()
+        private By _textUnderItem;
+        private By _addItem;
+
+        //public void AddChiffonDressToCart()
+        //{
+        //    Scroll.ScrollDown(driver, 0.650);
+        //    ActionEvent.MouseOver(driver, _textUnderChiffonDressCard);
+        //    _addChiffonDressButton.Click();
+        //    WaitUntil.ExpectedConditionsWaitElement(driver, _continueShoppingButton);
+        //    _continueShoppingButton.Click();
+        //}
+        //public void AddFadedSleeveShirtToCart()
+        //{
+        //    Scroll.ScrollDown(driver, 0.650);
+        //    ActionEvent.MouseOver(driver, _textUnderFadedSleeveCard);
+        //    _addFadedSleeveButton.Click();
+        //    WaitUntil.ExpectedConditionsWaitElement(driver, _continueShoppingButton);
+        //    _continueShoppingButton.Click();
+        //}
+        public void AddItemToCart(string item, string idProdukt )
         {
-            Scroll.ScrollDown(driver, 0.650);
-            ActionEvent.MouseOver(driver, _textUnderChiffonDressCard);
-            _addChiffonDressButton.Click();
+            _textUnderItem = By.CssSelector($"h5[itemprop='name'] a[title='{item}']");
+            _addItem = By.XPath($"//div[@class='button-container']//a[@data-id-product='{idProdukt}']/span[contains(text(),'Add to cart')]");
+            ActionEvent.MouseOver(driver, _textUnderItem);
+            BrowserFactory.Driver.FindElement(_addItem).Click();
             WaitUntil.ExpectedConditionsWaitElement(driver, _continueShoppingButton);
             _continueShoppingButton.Click();
         }
-        public void AddFadedSleeveShirtToCart()
-        {
-            Scroll.ScrollDown(driver, 0.650);
-            ActionEvent.MouseOver(driver, _textUnderFadedSleeveCard);
-            _addFadedSleeveButton.Click();
-            WaitUntil.ExpectedConditionsWaitElement(driver, _continueShoppingButton);
-            _continueShoppingButton.Click();
-        }
-        public void GoToCart()
-        {
-            _cartButton.Click();
-        }
+
+        //public void GoToCart()
+        //{
+        //    _cartButton.Click();
+        //}
     }
 }

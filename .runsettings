@@ -4,6 +4,7 @@
 		<EnvironmentVariables>
 			<BROWSER>CHROME</BROWSER>
 			<BASE_URL>http://automationpractice.com</BASE_URL>
-		</EnvironmentVariables>
+			<MY_ACCOUNT_URL></MY_ACCOUNT_URL>		
+	</EnvironmentVariables>
 	</RunConfiguration>
 </RunSettings>
