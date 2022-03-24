@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using System.Diagnostics;
 using System.IO;
 using System.Text.Json;
 using ta_task_1.TestData;
@@ -15,6 +16,7 @@ namespace ta_task_1
         {
             BrowserFactory.InitBrowser();
             DataInitialization();
+            Trace.Listeners.Add(new ConsoleTraceListener());
         }
 
         public void DataInitialization()
@@ -38,6 +40,7 @@ namespace ta_task_1
         protected void DoBeforEach()
         {
             BrowserFactory.PreconditionSetting();
+            Trace.Flush();
         }
     }
 }

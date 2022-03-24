@@ -1,3 +1,4 @@
+using NUnit.Allure.Core;
 using NUnit.Framework;
 using ta_task_1.PageObjects;
 using ta_task_1.TestData;
@@ -5,6 +6,7 @@ using ta_task_1.TestData;
 namespace ta_task_1
 {
     [TestFixture]
+    [AllureNUnit]
     [NonParallelizable]
     public class OnlineStoreCreateNewUserTest : BaseTest
     {

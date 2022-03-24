@@ -1,9 +1,11 @@
-﻿using NUnit.Framework;
+﻿using NUnit.Allure.Core;
+using NUnit.Framework;
 using ta_task_1.PageObjects;
 
 namespace ta_task_1
 {
     [TestFixture]
+    [AllureNUnit]
     [NonParallelizable]
     public class OnlineStoreAddItemsToCartTest : BaseTest
     {
