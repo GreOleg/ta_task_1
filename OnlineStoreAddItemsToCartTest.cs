@@ -11,7 +11,7 @@ namespace ta_task_1
         public void AddItemsToCartTest()
         {
             Navigation.GoTo(Pages.MyAccountPage);
-            Page.LogInForm.SubmitLogInForm("ivanov-3@example.com", "11111");
+            Page.LogInForm.SubmitLogInForm(person.emailUser, person.passwordUser);
             Navigation.GoTo(Pages.SummerDressesPage);
             Page.SummerDressesPage.EnterKeyWordToSearcField("dress");
             Page.DressSearchResultPage.AddItemToCart("Printed Chiffon Dress", "7");

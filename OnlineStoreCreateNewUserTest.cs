@@ -14,7 +14,7 @@ namespace ta_task_1
             Navigation.GoTo(Pages.MainPage);
             Page.MainPage.GoToAuthenticationPage();
             Page.CreateAnAccountForm.SubmitCreateAnAcountForm(Faker.Internet.Email());
-            Page.Registration.SubmitNewUserForm(TestUserData.userData);
+            Page.Registration.SubmitNewUserForm(person);
         }
     }
 }

@@ -35,7 +35,6 @@ namespace ta_task_1.WrapperFactory
             Driver.Manage().Window.Maximize();
             ((IJavaScriptExecutor)Driver).ExecuteScript("document.body.style.zoom ='100%'");
         }
-
         public static void CloseAllDrivers()
         {
             Driver.Quit();

@@ -1,8 +1,9 @@
-﻿using Faker.Extensions;
+﻿using System.IO;
+using System.Text.Json;
 
 namespace ta_task_1.TestData
 {
-    class Person
+    public class Person
     {
         public string emailUser { get; set; }
         public string firstNameUser { get; set; }
@@ -13,18 +14,5 @@ namespace ta_task_1.TestData
         public string stateUser { get; set; }
         public string postCodeUser { get; set; }
         public string mobilePhoneUser { get; set; }
-
-        public Person()
-        {
-            this.emailUser = Faker.Internet.Email();
-            this.firstNameUser = Faker.Name.First();
-            this.lastNameUser = Faker.Name.Last();
-            this.passwordUser = StringExtensions.Numerify("######");
-            this.addressUser = Faker.Address.StreetAddress();
-            this.cityUser = Faker.Address.City();
-            this.stateUser = Faker.RandomNumber.Next(1, 50).ToString();
-            this.postCodeUser = StringExtensions.Numerify("#####");
-            this.mobilePhoneUser = StringExtensions.Numerify("############");
-        }
     }
 }

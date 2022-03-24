@@ -1,0 +1,11 @@
+{
+  "emailUser": "ivanov-3@example.com",
+  "firstNameUser": "Ivan",
+  "lastNameUser": "Ivanov",
+  "passwordUser": "11111",
+  "addressUser": "123 Main Street East",
+  "cityUser": "Chicago",
+  "stateUser": "13",
+  "postCodeUser": "20521",
+  "mobilePhoneUser": "+375333333333"
+}
