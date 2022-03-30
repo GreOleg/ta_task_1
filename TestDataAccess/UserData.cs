@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace ta_task_1.TestData
+namespace ta_task_1.TestDataAccess
 {
-    public class Person
+    internal class UserData
     {
-        public string emailUser { get; set; }
+        public string Key { get; set; }
         public string firstNameUser { get; set; }
         public string lastNameUser { get; set; }
         public string passwordUser { get; set; }

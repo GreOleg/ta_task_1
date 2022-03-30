@@ -1,12 +1,9 @@
-﻿using NUnit.Framework;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.PageObjects;
-using System.Collections.Generic;
 using ta_task_1.WrapperFactory;
-using System.IO;
-using System.Text.Json;
 using ta_task_1.TestData;
+using ta_task_1.TestDataAccess;
 
 namespace ta_task_1.PageObjects
 {
@@ -59,17 +56,33 @@ namespace ta_task_1.PageObjects
         //    _createAnAccountFormSubmitAccount.Click();
         //}
 
-        public void SubmitNewUserForm(Person person)
+        //public void SubmitNewUserForm(Person person)
+        //{
+        //    WaitUntil.ExpectedConditionsWaitElement(driver, _createAnAccountFormPersonalInformationForm);
+        //    _createAnAccountFormPersonalInformationFirstName.SendKeys(person.firstNameUser);
+        //    _createAnAccountFormPersonalInformationLastName.SendKeys(person.lastNameUser);
+        //    _createAnAccountFormPersonalInformationPasswword.SendKeys(person.passwordUser);
+        //    _createAnAccountFormYourAddressAddress.SendKeys(person.addressUser);
+        //    _createAnAccountFormYourAddressCity.SendKeys(person.cityUser);
+        //    new SelectElement(_createAnAccountFormYourAddressState).SelectByValue(person.stateUser);
+        //    _createAnAccountFormYourAddressPostCode.SendKeys(person.postCodeUser);
+        //    _createAnAccountFormYourAddressMobilePhone.SendKeys(person.mobilePhoneUser);
+        //    _createAnAccountFormSubmitAccount.Click();
+        //}
+
+        public void SubmitNewUserForm(string userId)
         {
+            var userData = ExcelDataAccess.GetTestData(userId);
+
             WaitUntil.ExpectedConditionsWaitElement(driver, _createAnAccountFormPersonalInformationForm);
-            _createAnAccountFormPersonalInformationFirstName.SendKeys(person.firstNameUser);
-            _createAnAccountFormPersonalInformationLastName.SendKeys(person.lastNameUser);
-            _createAnAccountFormPersonalInformationPasswword.SendKeys(person.passwordUser);
-            _createAnAccountFormYourAddressAddress.SendKeys(person.addressUser);
-            _createAnAccountFormYourAddressCity.SendKeys(person.cityUser);
-            new SelectElement(_createAnAccountFormYourAddressState).SelectByValue(person.stateUser);
-            _createAnAccountFormYourAddressPostCode.SendKeys(person.postCodeUser);
-            _createAnAccountFormYourAddressMobilePhone.SendKeys(person.mobilePhoneUser);
+            _createAnAccountFormPersonalInformationFirstName.SendKeys(userData.firstNameUser);
+            _createAnAccountFormPersonalInformationLastName.SendKeys(userData.lastNameUser);
+            _createAnAccountFormPersonalInformationPasswword.SendKeys(userData.passwordUser);
+            _createAnAccountFormYourAddressAddress.SendKeys(userData.addressUser);
+            _createAnAccountFormYourAddressCity.SendKeys(userData.cityUser);
+            new SelectElement(_createAnAccountFormYourAddressState).SelectByValue(userData.stateUser);
+            _createAnAccountFormYourAddressPostCode.SendKeys(userData.postCodeUser);
+            _createAnAccountFormYourAddressMobilePhone.SendKeys(userData.mobilePhoneUser);
             _createAnAccountFormSubmitAccount.Click();
         }
     }

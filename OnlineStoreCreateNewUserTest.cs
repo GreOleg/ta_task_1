@@ -1,7 +1,6 @@
 using NUnit.Allure.Core;
 using NUnit.Framework;
 using ta_task_1.PageObjects;
-using ta_task_1.TestData;
 
 namespace ta_task_1
 {
@@ -10,13 +9,17 @@ namespace ta_task_1
     [NonParallelizable]
     public class OnlineStoreCreateNewUserTest : BaseTest
     {
-        [Test]
-        public void CreateNewUserTest()
+        [TestCase("User1")]
+        [TestCase("User2")]
+        [TestCase("User3")]
+        [TestCase("User4")]
+        [TestCase("User5")]
+        public void CreateNewUserTest(string user)
         {
             Navigation.GoTo(Pages.MainPage);
             Page.MainPage.GoToAuthenticationPage();
             Page.CreateAnAccountForm.SubmitCreateAnAcountForm(Faker.Internet.Email());
-            Page.Registration.SubmitNewUserForm(person);
+            Page.Registration.SubmitNewUserForm(user);
         }
     }
 }

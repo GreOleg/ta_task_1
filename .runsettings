@@ -4,7 +4,8 @@
 		<EnvironmentVariables>
 			<BROWSER>CHROME</BROWSER>
 			<BASE_URL>http://automationpractice.com</BASE_URL>
-			<MY_ACCOUNT_URL></MY_ACCOUNT_URL>		
+			<MY_ACCOUNT_URL></MY_ACCOUNT_URL>
+			<PATH>C:\Users\ahresik\Documents\mentoring-tasks-project\ta_task_1\TestDataAccess\TestData.xlsx</PATH>
 	</EnvironmentVariables>
 	</RunConfiguration>
 </RunSettings>
