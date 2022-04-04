@@ -93,7 +93,7 @@ namespace ta_task_1.PageObjects
 
             AllureLifecycle.Instance.WrapInStep(() =>
             {
-                Console.WriteLine($"Create new user with First Name {userData.firstNameUser}, Last Name {userData.lastNameUser}, Password {userData.passwordUser}, Addres {userData.addressUser}, City {userData.cityUser}, Mobile Phone {userData.mobilePhoneUser}");
+                Console.WriteLine($"Create new user with First Name: {userData.firstNameUser}, Last Name: {userData.lastNameUser}, Password: {userData.passwordUser}, Addres: {userData.addressUser}, City: {userData.cityUser}, Mobile Phone: {userData.mobilePhoneUser}");
             }, "SubmitNewUserForm");
         }
     }

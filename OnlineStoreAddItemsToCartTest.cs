@@ -23,8 +23,8 @@ namespace ta_task_1
             Page.DressSearchResultPage.AddItemToCart("Printed Chiffon Dress", "7");
             Page.DressSearchResultPage.AddItemToCart("Faded Short Sleeve T-shirts", "1");
             Navigation.GoTo(Pages.CartPage);
-            //Page.Cart.AssertItemInCart("Printed Chiffon Dress");
-            Page.Cart.AssertItemInCart("Printed Chiffon");
+            Page.Cart.AssertItemInCart("Printed Chiffon Dress");
+            //Page.Cart.AssertItemInCart("Printed Chiffon");
             Page.Cart.AssertItemInCart("Faded Short Sleeve T-shirts");
         }
     }

@@ -15,7 +15,7 @@ namespace ta_task_1.PageObjects
         public void GoToAuthenticationPage()
         {
             _signInButton.Click();
-            _logger.Info($"Click on sign in button => {_signInButton}");
+            _logger.Info("Click on sign in button => 'a.login'}");
         }
     }
 }
