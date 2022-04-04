@@ -4,6 +4,10 @@ using SeleniumExtras.PageObjects;
 using ta_task_1.WrapperFactory;
 using ta_task_1.TestData;
 using ta_task_1.TestDataAccess;
+using NUnit.Allure.Attributes;
+using Allure.Commons;
+using NUnit.Allure.Core;
+using System;
 
 namespace ta_task_1.PageObjects
 {
@@ -69,7 +73,9 @@ namespace ta_task_1.PageObjects
         //    _createAnAccountFormYourAddressMobilePhone.SendKeys(person.mobilePhoneUser);
         //    _createAnAccountFormSubmitAccount.Click();
         //}
-
+        //[AllureStep("Create new user with First Name #{0}, Last Name #{1}, Password #{2}, Addres #{3}, City #{4}, Mobile Phone #{7}")]
+        //[AllureStep("Create new user with First Name {userData.firstNameUser}, Last Name {userData.lastNameUser}, Password {userData.passwordUser}, Addres {userData.addressUser}, City {userData.cityUser}, Mobile Phone {userData.mobilePhoneUser}")]
+        [AllureStep]
         public void SubmitNewUserForm(string userId)
         {
             var userData = ExcelDataAccess.GetTestData(userId);
@@ -84,6 +90,11 @@ namespace ta_task_1.PageObjects
             _createAnAccountFormYourAddressPostCode.SendKeys(userData.postCodeUser);
             _createAnAccountFormYourAddressMobilePhone.SendKeys(userData.mobilePhoneUser);
             _createAnAccountFormSubmitAccount.Click();
+
+            AllureLifecycle.Instance.WrapInStep(() =>
+            {
+                Console.WriteLine($"Create new user with First Name {userData.firstNameUser}, Last Name {userData.lastNameUser}, Password {userData.passwordUser}, Addres {userData.addressUser}, City {userData.cityUser}, Mobile Phone {userData.mobilePhoneUser}");
+            }, "SubmitNewUserForm");
         }
     }
 }

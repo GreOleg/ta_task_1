@@ -1,10 +1,11 @@
+using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 using NUnit.Framework;
 using ta_task_1.PageObjects;
 
 namespace ta_task_1
 {
-    [TestFixture]
+    [TestFixture(Description = "Regestration new user")]
     [AllureNUnit]
     [NonParallelizable]
     public class OnlineStoreCreateNewUserTest : BaseTest
@@ -14,6 +15,9 @@ namespace ta_task_1
         [TestCase("User3")]
         [TestCase("User4")]
         [TestCase("User5")]
+        [AllureTag("NUnit", "Debug")]
+        [AllureFeature("Core")]
+        [AllureLink("Online Store", "http://automationpractice.com")]
         public void CreateNewUserTest(string user)
         {
             Navigation.GoTo(Pages.MainPage);
