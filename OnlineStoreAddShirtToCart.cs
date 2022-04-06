@@ -4,6 +4,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Remote;
 using System;
+using System.Collections.Generic;
 using ta_task_1.Helpers;
 
 namespace ta_task_1
@@ -11,6 +12,7 @@ namespace ta_task_1
     [TestFixture(Description = "Add 'Faded Short Sleeve T-shirts' to cart")]
     [AllureNUnit]
     //[Parallelizable(ParallelScope.Children)]
+    [NonParallelizable]
     public class OnlineStoreAddShirtToCart
     {
         private IWebDriver driver;
@@ -26,18 +28,23 @@ namespace ta_task_1
 
         public void Setup()
         {
-            var driverOptions = new ChromeOptions();
+            var options = new ChromeOptions();
+            options.BrowserVersion = "99";
+
             var runName = GetType().Assembly.GetName().Name;
             var timestamp = $"{DateTime.Now:yyyyMMdd.HHmm}";
-            driverOptions.AddAdditionalCapability("name", runName, true);
-            driverOptions.AddAdditionalCapability("videoName", $"{runName}.{timestamp}.mp4", true);
-            driverOptions.AddAdditionalCapability("logName", $"{runName}.{timestamp}.log", true);
-            driverOptions.AddAdditionalCapability("enableVNC", true, true);
-            driverOptions.AddAdditionalCapability("enableVideo", true, true);
-            driverOptions.AddAdditionalCapability("enableLog", true, true);
-            driverOptions.AddAdditionalCapability("screenResolution", "1920x1080x24", true);
-            driver = new RemoteWebDriver(new Uri("http://127.0.0.1:4444/wd/hub"), driverOptions);
+            var cloudOptions = new Dictionary<string, object>();
+
+            cloudOptions.Add("logName", $"{runName}.{timestamp}.log");
+            cloudOptions.Add("enableVNC", true);
+            cloudOptions.Add("enableLog", true);
+
+            options.AddAdditionalOption("selenoid:options", cloudOptions);
+
+            driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), options);
             driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(30);
+
+            //driver = new ChromeDriver();
             driver.Navigate().GoToUrl(@"http://automationpractice.com/index.php");
             driver.Manage().Window.Maximize();
         }
@@ -68,31 +75,31 @@ namespace ta_task_1
             driver.FindElement(_succesResultHeader).Text.Equals("Product successfully added to your shopping cart");
         }
 
-        [Test]
-        public void AddShirtToCart2()
-        {
-            //In the Search field, enter the value "shirts".
-            var searchField = driver.FindElement(_searchInputButton);
-            searchField.SendKeys("shirts");
+        //[Test]
+        //public void AddShirtToCart2()
+        //{
+        //    //In the Search field, enter the value "shirts".
+        //    var searchField = driver.FindElement(_searchInputButton);
+        //    searchField.SendKeys("shirts");
 
-            //Wait for the element under Search with the text "T-shirts > Faded Short Sleeve T-" to appear
-            //and click on this element.
-            WrapperForElement.ElementClick(driver, _actualResult);
+        //    //Wait for the element under Search with the text "T-shirts > Faded Short Sleeve T-" to appear
+        //    //and click on this element.
+        //    WrapperForElement.ElementClick(driver, _actualResult);
 
-            //Wait for the product page to appear.
-            WrapperForElement.WaitElement(driver, _productPage);
+        //    //Wait for the product page to appear.
+        //    WrapperForElement.WaitElement(driver, _productPage);
 
-            //Check that the product name is "Faded Short Sleeve T-shirts".
-            var productTitle = driver.FindElement(_productName);
-            Assert.AreEqual(productTitle.Text, "Faded Short Sleeve T-shirts");
+        //    //Check that the product name is "Faded Short Sleeve T-shirts".
+        //    var productTitle = driver.FindElement(_productName);
+        //    Assert.AreEqual(productTitle.Text, "Faded Short Sleeve T-shirts");
 
-            //Click on the Add to cart button.
-            WrapperForElement.ElementClick(driver, _addCardButton);
+        //    //Click on the Add to cart button.
+        //    WrapperForElement.ElementClick(driver, _addCardButton);
 
-            //Wait for the element with the text "Product successfully added to your shopping cart".
-            WrapperForElement.ExpectedConditionsWaitElement(driver, _succesResultHeader);
-            driver.FindElement(_succesResultHeader).Text.Equals("Product successfully added to your shopping cart");
-        }
+        //    //Wait for the element with the text "Product successfully added to your shopping cart".
+        //    WrapperForElement.ExpectedConditionsWaitElement(driver, _succesResultHeader);
+        //    driver.FindElement(_succesResultHeader).Text.Equals("Product successfully added to your shopping cart");
+        //}
 
         [TearDown]
         public void TearDown()
