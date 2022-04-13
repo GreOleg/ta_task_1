@@ -11,8 +11,8 @@ namespace ta_task_1
 {
     [TestFixture(Description = "Add 'Faded Short Sleeve T-shirts' to cart")]
     [AllureNUnit]
-    //[Parallelizable(ParallelScope.Children)]
-    [NonParallelizable]
+    [Parallelizable]
+    //[NonParallelizable]
     public class OnlineStoreAddShirtToCart
     {
         private IWebDriver driver;
@@ -35,9 +35,12 @@ namespace ta_task_1
             var timestamp = $"{DateTime.Now:yyyyMMdd.HHmm}";
             var cloudOptions = new Dictionary<string, object>();
 
+            cloudOptions.Add("name", runName);
             cloudOptions.Add("logName", $"{runName}.{timestamp}.log");
+            cloudOptions.Add("videoName", $"{runName}.{timestamp}.mp4");
             cloudOptions.Add("enableVNC", true);
             cloudOptions.Add("enableLog", true);
+            cloudOptions.Add("enableVideo", true);
 
             options.AddAdditionalOption("selenoid:options", cloudOptions);
 
@@ -74,33 +77,6 @@ namespace ta_task_1
             WrapperForElement.ExpectedConditionsWaitElement(driver, _succesResultHeader);
             driver.FindElement(_succesResultHeader).Text.Equals("Product successfully added to your shopping cart");
         }
-
-        //[Test]
-        //public void AddShirtToCart2()
-        //{
-        //    //In the Search field, enter the value "shirts".
-        //    var searchField = driver.FindElement(_searchInputButton);
-        //    searchField.SendKeys("shirts");
-
-        //    //Wait for the element under Search with the text "T-shirts > Faded Short Sleeve T-" to appear
-        //    //and click on this element.
-        //    WrapperForElement.ElementClick(driver, _actualResult);
-
-        //    //Wait for the product page to appear.
-        //    WrapperForElement.WaitElement(driver, _productPage);
-
-        //    //Check that the product name is "Faded Short Sleeve T-shirts".
-        //    var productTitle = driver.FindElement(_productName);
-        //    Assert.AreEqual(productTitle.Text, "Faded Short Sleeve T-shirts");
-
-        //    //Click on the Add to cart button.
-        //    WrapperForElement.ElementClick(driver, _addCardButton);
-
-        //    //Wait for the element with the text "Product successfully added to your shopping cart".
-        //    WrapperForElement.ExpectedConditionsWaitElement(driver, _succesResultHeader);
-        //    driver.FindElement(_succesResultHeader).Text.Equals("Product successfully added to your shopping cart");
-        //}
-
         [TearDown]
         public void TearDown()
         {

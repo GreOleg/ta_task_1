@@ -17,5 +17,6 @@ namespace ta_task_1
         {
             new WebDriverWait(webDriver, TimeSpan.FromSeconds(seconds)).Until(ExpectedConditions.ElementToBeClickable(locator));
         }
+        
     }
 }
