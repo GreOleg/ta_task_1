@@ -17,7 +17,6 @@ namespace ta_task_1
         private IWebDriver driver;
 
         [SetUp]
-
         public void Setup()
         {
             BrowserFactory.InitBrowser();
@@ -32,24 +31,24 @@ namespace ta_task_1
             //Navigation.GoTo(Pages.MainPage);
 
             //In the Search field, enter the value "shirts".
-            new WElement(By.XPath("//input[@id='search_query_top']")).InputText("shirts");
+            WElement.Element(By.XPath("//input[@id='search_query_top']")).InputText("shirts");
 
             //Wait for the element under Search with the text "T-shirts > Faded Short Sleeve T-" to appear
             //and click on this element.
-            new WElement(By.XPath("//li[contains(text(), 'T-shirts > Faded Short Sleeve T-')]")).EClick();
+            WElement.Element(By.XPath("//li[contains(text(), 'T-shirts > Faded Short Sleeve T-')]")).EClick();
 
             //Wait for the product page to appear.
-            new WElement(By.XPath("//body[@id='product']")).WaitElement();
+            WElement.Element(By.XPath("//body[@id='product']")).WaitElement();
 
             //Check that the product name is "Faded Short Sleeve T-shirts".
-            var productTitle = driver.FindElement(By.XPath("//h1[contains(text(), 'Faded Short Sleeve T-shirts')]"));
-            Assert.AreEqual(productTitle.Text, "Faded Short Sleeve T-shirts");
+            string productTitle = (driver.FindElement(By.XPath("//h1[contains(text(), 'Faded Short Sleeve T-shirts')]"))).Text;
+            Assert.AreEqual(productTitle, "Faded Short Sleeve T-shirts");
 
             //Click on the Add to cart button.
-            new WElement(By.XPath("//p[@id='add_to_cart']/button")).EClick();
+            WElement.Element(By.XPath("//p[@id='add_to_cart']/button")).EClick();
 
             //Wait for the element with the text "Product successfully added to your shopping cart".
-            new WElement(By.XPath("//h2[normalize-space()='Product successfully added to your shopping cart']")).ExpectedConditionsElement();
+            WElement.Element(By.XPath("//h2[normalize-space()='Product successfully added to your shopping cart']")).ExpectedConditionsElement();
             driver.FindElement(By.XPath("//h2[normalize-space()='Product successfully added to your shopping cart']")).Text.Equals("Product successfully added to your shopping cart");
         }
 
