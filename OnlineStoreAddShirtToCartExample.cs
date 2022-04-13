@@ -10,7 +10,6 @@ namespace ta_task_1
 {
     [TestFixture(Description = "Add 'Faded Short Sleeve T-shirts' to cart")]
     [AllureNUnit]
-    //[Parallelizable]
     [NonParallelizable]
     public class OnlineStoreAddShirtToCartExample
     {
@@ -28,8 +27,6 @@ namespace ta_task_1
         [Test]
         public void AddShirtToCartExample()
         {
-            //Navigation.GoTo(Pages.MainPage);
-
             //In the Search field, enter the value "shirts".
             WElement.Element(By.XPath("//input[@id='search_query_top']")).InputText("shirts");
 
@@ -41,7 +38,7 @@ namespace ta_task_1
             WElement.Element(By.XPath("//body[@id='product']")).WaitElement();
 
             //Check that the product name is "Faded Short Sleeve T-shirts".
-            string productTitle = (driver.FindElement(By.XPath("//h1[contains(text(), 'Faded Short Sleeve T-shirts')]"))).Text;
+            string productTitle = driver.FindElement(By.XPath("//h1[contains(text(), 'Faded Short Sleeve T-shirts')]")).Text;
             Assert.AreEqual(productTitle, "Faded Short Sleeve T-shirts");
 
             //Click on the Add to cart button.
