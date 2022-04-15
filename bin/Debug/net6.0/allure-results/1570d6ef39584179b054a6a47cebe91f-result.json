@@ -1,0 +1,132 @@
+{
+  "uuid": "7e7f516f-ce5f-4c14-919f-7c81499582e1-tr-0-1001",
+  "historyId": "ta_task_1.OnlineStoreAddItemsToCartTest.AddItemsToCartTest",
+  "fullName": "ta_task_1.OnlineStoreAddItemsToCartTest.AddItemsToCartTest",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "BQTL0018"
+    },
+    {
+      "name": "package",
+      "value": "ta_task_1"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddItemsToCartTest"
+    },
+    {
+      "name": "testClass",
+      "value": "OnlineStoreAddItemsToCartTest"
+    },
+    {
+      "name": "tag",
+      "value": "NUnit"
+    },
+    {
+      "name": "tag",
+      "value": "Debug"
+    },
+    {
+      "name": "feature",
+      "value": "Core"
+    }
+  ],
+  "links": [
+    {
+      "name": "Online Store",
+      "url": "http://automationpractice.com",
+      "type": "link"
+    }
+  ],
+  "name": "AddItemsToCartTest",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.NoSuchElementException : Could not find element by: By.XPath: //input[@id='search_query_top']",
+    "trace": "   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.SendKeys(String text)\r\n   at ta_task_1.PageObjects.SummerDressesPageObject.EnterKeyWordToSearcField(String searchValue) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\PageObjects\\SummerDressesPageObject.cs:line 18\r\n   at ta_task_1.OnlineStoreAddItemsToCartTest.AddItemsToCartTest() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddItemsToCartTest.cs:line 22"
+  },
+  "stage": "finished",
+  "description": "Add 2 dresses to cart\n",
+  "steps": [
+    {
+      "name": "AddItemsToCartTest",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.NoSuchElementException : Could not find element by: By.XPath: //input[@id='search_query_top']",
+        "trace": "   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.SendKeys(String text)\r\n   at ta_task_1.PageObjects.SummerDressesPageObject.EnterKeyWordToSearcField(String searchValue) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\PageObjects\\SummerDressesPageObject.cs:line 18\r\n   at ta_task_1.OnlineStoreAddItemsToCartTest.AddItemsToCartTest() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddItemsToCartTest.cs:line 22"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "Go to URL => http://automationpractice.com/index.php?controller=authentication&back=my-account",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "http://automationpractice.com/index.php?controller=authentication&back=my-account"
+            }
+          ],
+          "start": 1649078690463,
+          "stop": 1649078698722
+        },
+        {
+          "name": "Go to URL => http://automationpractice.com/index.php?id_category=11&controller=category",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "http://automationpractice.com/index.php?id_category=11&controller=category"
+            }
+          ],
+          "start": 1649078710127,
+          "stop": 1649078710361
+        }
+      ],
+      "attachments": [
+        {
+          "name": "AddItemsToCartTest_screenshot_637846863106408003.png",
+          "source": "63a254a5a9624500a86c21e2f31bc478-attachment.png",
+          "type": "image/png"
+        },
+        {
+          "name": "Console Output",
+          "source": "1b368111d57243c596e60b56ba573177-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1649078690289,
+      "stop": 1649078710658
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1649078690288,
+  "stop": 1649078710665
+}

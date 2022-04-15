@@ -1,0 +1,48 @@
+{
+  "uuid": "69dc1c7d-bc19-454b-af93-c2d0183d16e4-tc-0-1002",
+  "name": "ta_task_1.OnlineStoreAddShirtToCart.AddShirtToCart2",
+  "children": [
+    "796ebc15-bc0d-4b98-8652-48ac6e67080c-tr-0-1004"
+  ],
+  "befores": [
+    {
+      "name": "Setup",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "System.ArgumentException : There is already an option for the browserVersion capability. Please use the BrowserVersion property instead. (Parameter 'capabilityName')\r\nTearDown : System.NullReferenceException : Object reference not set to an instance of an object.",
+        "trace": "   at OpenQA.Selenium.DriverOptions.ValidateCapabilityName(String capabilityName)\r\n   at OpenQA.Selenium.Chromium.ChromiumOptions.AddAdditionalChromiumOption(String optionName, Object optionValue)\r\n   at OpenQA.Selenium.Chromium.ChromiumOptions.AddAdditionalCapability(String capabilityName, Object capabilityValue, Boolean isGlobalCapability)\r\n   at OpenQA.Selenium.Chromium.ChromiumOptions.AddAdditionalCapability(String capabilityName, Object capabilityValue)\r\n   at ta_task_1.OnlineStoreAddShirtToCart.Setup() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddShirtToCart.cs:line 46\r\n--TearDown\r\n   at ta_task_1.OnlineStoreAddShirtToCart.TearDown() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddShirtToCart.cs:line 111"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1649237519589,
+      "stop": 1649237519589
+    }
+  ],
+  "afters": [
+    {
+      "name": "TearDown",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "System.ArgumentException : There is already an option for the browserVersion capability. Please use the BrowserVersion property instead. (Parameter 'capabilityName')\r\nTearDown : System.NullReferenceException : Object reference not set to an instance of an object.",
+        "trace": "   at OpenQA.Selenium.DriverOptions.ValidateCapabilityName(String capabilityName)\r\n   at OpenQA.Selenium.Chromium.ChromiumOptions.AddAdditionalChromiumOption(String optionName, Object optionValue)\r\n   at OpenQA.Selenium.Chromium.ChromiumOptions.AddAdditionalCapability(String capabilityName, Object capabilityValue, Boolean isGlobalCapability)\r\n   at OpenQA.Selenium.Chromium.ChromiumOptions.AddAdditionalCapability(String capabilityName, Object capabilityValue)\r\n   at ta_task_1.OnlineStoreAddShirtToCart.Setup() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddShirtToCart.cs:line 46\r\n--TearDown\r\n   at ta_task_1.OnlineStoreAddShirtToCart.TearDown() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddShirtToCart.cs:line 111"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1649237519589,
+      "stop": 1649237519589
+    }
+  ],
+  "links": [],
+  "start": 1649237519554,
+  "stop": 1649237519623
+}

@@ -1,0 +1,48 @@
+{
+  "uuid": "5d356c68-9bc0-4186-875e-07d6f563dd8a-tc-0-1002",
+  "name": "ta_task_1.OnlineStoreAddShirtToCart.AddShirtToCart",
+  "children": [
+    "26b4125e-4bf4-4796-8d74-1e324415bd7c-tr-0-1003"
+  ],
+  "befores": [
+    {
+      "name": "Setup",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.WebDriverException : The new session command returned a value ('You are using Selenoid 1.10.7!') that is not a valid JSON object.\r\nTearDown : System.NullReferenceException : Object reference not set to an instance of an object.",
+        "trace": "   at OpenQA.Selenium.WebDriver.StartSession(ICapabilities desiredCapabilities)\r\n   at OpenQA.Selenium.WebDriver..ctor(ICommandExecutor executor, ICapabilities capabilities)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(ICommandExecutor commandExecutor, ICapabilities desiredCapabilities)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(Uri remoteAddress, ICapabilities desiredCapabilities, TimeSpan commandTimeout)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(Uri remoteAddress, ICapabilities desiredCapabilities)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(Uri remoteAddress, DriverOptions options)\r\n   at ta_task_1.OnlineStoreAddShirtToCart.Setup() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddShirtToCart.cs:line 40\r\n--TearDown\r\n   at ta_task_1.OnlineStoreAddShirtToCart.TearDown() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddShirtToCart.cs:line 107"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1649171204077,
+      "stop": 1649171204077
+    }
+  ],
+  "afters": [
+    {
+      "name": "TearDown",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.WebDriverException : The new session command returned a value ('You are using Selenoid 1.10.7!') that is not a valid JSON object.\r\nTearDown : System.NullReferenceException : Object reference not set to an instance of an object.",
+        "trace": "   at OpenQA.Selenium.WebDriver.StartSession(ICapabilities desiredCapabilities)\r\n   at OpenQA.Selenium.WebDriver..ctor(ICommandExecutor executor, ICapabilities capabilities)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(ICommandExecutor commandExecutor, ICapabilities desiredCapabilities)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(Uri remoteAddress, ICapabilities desiredCapabilities, TimeSpan commandTimeout)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(Uri remoteAddress, ICapabilities desiredCapabilities)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(Uri remoteAddress, DriverOptions options)\r\n   at ta_task_1.OnlineStoreAddShirtToCart.Setup() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddShirtToCart.cs:line 40\r\n--TearDown\r\n   at ta_task_1.OnlineStoreAddShirtToCart.TearDown() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddShirtToCart.cs:line 107"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1649171204078,
+      "stop": 1649171204078
+    }
+  ],
+  "links": [],
+  "start": 1649171203916,
+  "stop": 1649171204110
+}

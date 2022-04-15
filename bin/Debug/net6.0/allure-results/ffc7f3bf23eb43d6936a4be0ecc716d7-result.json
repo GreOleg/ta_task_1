@@ -1,0 +1,68 @@
+{
+  "uuid": "9511a302-66bb-4294-87a0-62e9d4c7329e-tr-0-1003",
+  "historyId": "ta_task_1.OnlineStoreAddShirtToCart.AddShirtToCart",
+  "fullName": "ta_task_1.OnlineStoreAddShirtToCart.AddShirtToCart",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "BQTL0018"
+    },
+    {
+      "name": "package",
+      "value": "ta_task_1"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddShirtToCart"
+    },
+    {
+      "name": "testClass",
+      "value": "OnlineStoreAddShirtToCart"
+    }
+  ],
+  "links": [],
+  "name": "AddShirtToCart",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.WebDriverArgumentException : invalid argument: entry 0 of 'firstMatch' is invalid\nfrom invalid argument: cannot parse capability: goog:chromeOptions\nfrom invalid argument: unrecognized chrome option: enableVNC\r\nTearDown : System.NullReferenceException : Object reference not set to an instance of an object.",
+    "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.StartSession(ICapabilities desiredCapabilities)\r\n   at OpenQA.Selenium.WebDriver..ctor(ICommandExecutor executor, ICapabilities capabilities)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(ICommandExecutor commandExecutor, ICapabilities desiredCapabilities)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(Uri remoteAddress, ICapabilities desiredCapabilities, TimeSpan commandTimeout)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(Uri remoteAddress, ICapabilities desiredCapabilities)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(Uri remoteAddress, DriverOptions options)\r\n   at ta_task_1.OnlineStoreAddShirtToCart.Setup() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddShirtToCart.cs:line 65\r\n--TearDown\r\n   at ta_task_1.OnlineStoreAddShirtToCart.TearDown() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddShirtToCart.cs:line 128"
+  },
+  "stage": "finished",
+  "description": "\nSetup SetUp method failed\n\nTearDown TearDown method failed\nAdd 'Faded Short Sleeve T-shirts' to cart\n",
+  "steps": [
+    {
+      "name": "AddShirtToCart skipped because of Setup failure",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.WebDriverArgumentException : invalid argument: entry 0 of 'firstMatch' is invalid\nfrom invalid argument: cannot parse capability: goog:chromeOptions\nfrom invalid argument: unrecognized chrome option: enableVNC\r\nTearDown : System.NullReferenceException : Object reference not set to an instance of an object.",
+        "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.StartSession(ICapabilities desiredCapabilities)\r\n   at OpenQA.Selenium.WebDriver..ctor(ICommandExecutor executor, ICapabilities capabilities)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(ICommandExecutor commandExecutor, ICapabilities desiredCapabilities)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(Uri remoteAddress, ICapabilities desiredCapabilities, TimeSpan commandTimeout)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(Uri remoteAddress, ICapabilities desiredCapabilities)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(Uri remoteAddress, DriverOptions options)\r\n   at ta_task_1.OnlineStoreAddShirtToCart.Setup() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddShirtToCart.cs:line 65\r\n--TearDown\r\n   at ta_task_1.OnlineStoreAddShirtToCart.TearDown() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddShirtToCart.cs:line 128"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "a2583d2cc66d4516aece49c8843425e0-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1649256459896,
+      "stop": 1649256462256
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1649256459895,
+  "stop": 1649256462263
+}

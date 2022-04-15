@@ -1,0 +1,132 @@
+{
+  "uuid": "461a0288-8efc-4460-84e0-ab4f420c6c76-tr-0-1001",
+  "historyId": "ta_task_1.OnlineStoreAddItemsToCartTest.AddItemsToCartTest",
+  "fullName": "ta_task_1.OnlineStoreAddItemsToCartTest.AddItemsToCartTest",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "BQTL0018"
+    },
+    {
+      "name": "package",
+      "value": "ta_task_1"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddItemsToCartTest"
+    },
+    {
+      "name": "testClass",
+      "value": "OnlineStoreAddItemsToCartTest"
+    },
+    {
+      "name": "tag",
+      "value": "NUnit"
+    },
+    {
+      "name": "tag",
+      "value": "Debug"
+    },
+    {
+      "name": "feature",
+      "value": "Core"
+    }
+  ],
+  "links": [
+    {
+      "name": "Online Store",
+      "url": "http://automationpractice.com",
+      "type": "link"
+    }
+  ],
+  "name": "AddItemsToCartTest",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.ElementNotInteractableException : element not interactable\n  (Session info: chrome=100.0.4896.60)",
+    "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.InternalExecute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at ta_task_1.PageObjects.DressSearchResultPageObject.AddItemToCart(String item, String idProdukt) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\PageObjects\\DressSearchResultPageObject.cs:line 23\r\n   at ta_task_1.OnlineStoreAddItemsToCartTest.AddItemsToCartTest() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddItemsToCartTest.cs:line 24"
+  },
+  "stage": "finished",
+  "description": "Add 2 dresses to cart\n",
+  "steps": [
+    {
+      "name": "AddItemsToCartTest",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.ElementNotInteractableException : element not interactable\n  (Session info: chrome=100.0.4896.60)",
+        "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.InternalExecute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at ta_task_1.PageObjects.DressSearchResultPageObject.AddItemToCart(String item, String idProdukt) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\PageObjects\\DressSearchResultPageObject.cs:line 23\r\n   at ta_task_1.OnlineStoreAddItemsToCartTest.AddItemsToCartTest() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddItemsToCartTest.cs:line 24"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "Go to URL => http://automationpractice.com/index.php?controller=authentication&back=my-account",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "http://automationpractice.com/index.php?controller=authentication&back=my-account"
+            }
+          ],
+          "start": 1649154629483,
+          "stop": 1649154641588
+        },
+        {
+          "name": "Go to URL => http://automationpractice.com/index.php?id_category=11&controller=category",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "http://automationpractice.com/index.php?id_category=11&controller=category"
+            }
+          ],
+          "start": 1649154653558,
+          "stop": 1649154664923
+        }
+      ],
+      "attachments": [
+        {
+          "name": "AddItemsToCartTest_screenshot_637847622756516282.png",
+          "source": "ae978efbce814d908ee2f40077d72fbb-attachment.png",
+          "type": "image/png"
+        },
+        {
+          "name": "Console Output",
+          "source": "0e02095b896e47d9929899b9ed84aa66-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1649154629308,
+      "stop": 1649154675675
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1649154629307,
+  "stop": 1649154675679
+}

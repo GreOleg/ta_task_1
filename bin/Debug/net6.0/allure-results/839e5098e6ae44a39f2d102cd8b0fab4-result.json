@@ -1,0 +1,165 @@
+{
+  "uuid": "f6dc5155-1114-4468-8b7d-b4d593c08026-tr-0-1008",
+  "historyId": "ta_task_1.OnlineStoreCreateNewUserTest.CreateNewUserTest(\"User4\")",
+  "fullName": "ta_task_1.OnlineStoreCreateNewUserTest.CreateNewUserTest(\"User4\")",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "BQTL0018"
+    },
+    {
+      "name": "package",
+      "value": "ta_task_1"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateNewUserTest"
+    },
+    {
+      "name": "testClass",
+      "value": "OnlineStoreCreateNewUserTest"
+    },
+    {
+      "name": "tag",
+      "value": "NUnit"
+    },
+    {
+      "name": "tag",
+      "value": "Debug"
+    },
+    {
+      "name": "feature",
+      "value": "Core"
+    }
+  ],
+  "links": [
+    {
+      "name": "Online Store",
+      "url": "http://automationpractice.com",
+      "type": "link"
+    }
+  ],
+  "name": "CreateNewUserTest(\"User4\")",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "CreateNewUserTest(\"User4\")"
+  },
+  "stage": "finished",
+  "description": "Regestration new user\n",
+  "steps": [
+    {
+      "name": "CreateNewUserTest(\"User4\")",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "Go to URL => http://automationpractice.com",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "http://automationpractice.com"
+            }
+          ],
+          "start": 1649154769053,
+          "stop": 1649154771334
+        },
+        {
+          "name": "Create an new account(User) with Email fred_rau@mcdermottzieme.info",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "fred_rau@mcdermottzieme.info"
+            }
+          ],
+          "start": 1649154772816,
+          "stop": 1649154773102
+        },
+        {
+          "name": "SubmitNewUserForm",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "SubmitNewUserForm",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1649154781928,
+              "stop": 1649154781928
+            }
+          ],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "User4"
+            }
+          ],
+          "start": 1649154773102,
+          "stop": 1649154781928
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "3a8fd5104db340df9512f3be2084f6be-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1649154769021,
+      "stop": 1649154781932
+    }
+  ],
+  "attachments": [],
+  "parameters": [
+    {
+      "name": "Param #0",
+      "value": "User4"
+    }
+  ],
+  "start": 1649154769021,
+  "stop": 1649154781932
+}

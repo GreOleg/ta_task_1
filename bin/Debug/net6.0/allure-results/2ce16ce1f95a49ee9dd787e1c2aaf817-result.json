@@ -1,0 +1,68 @@
+{
+  "uuid": "c41ba530-6751-482d-862c-c8bb7770492b-tr-0-1005",
+  "historyId": "ta_task_1.OnlineStoreAddShirtToCartExample.AddShirtToCartExample",
+  "fullName": "ta_task_1.OnlineStoreAddShirtToCartExample.AddShirtToCartExample",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "BQTL0018"
+    },
+    {
+      "name": "package",
+      "value": "ta_task_1"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddShirtToCartExample"
+    },
+    {
+      "name": "testClass",
+      "value": "OnlineStoreAddShirtToCartExample"
+    }
+  ],
+  "links": [],
+  "name": "AddShirtToCartExample",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "System.NullReferenceException : The WebDriver browser instance was not initialized. You should first call the method InitBrowser.\r\nTearDown : System.NullReferenceException : Object reference not set to an instance of an object.",
+    "trace": "   at ta_task_1.WrapperFactory.BrowserFactory.get_Driver() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\WrapperFactory\\BrowserFactory.cs:line 16\r\n   at ta_task_1.OnlineStoreAddShirtToCartExample.Setup() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddShirtToCartExample.cs:line 30\r\n--TearDown\r\n   at ta_task_1.OnlineStoreAddShirtToCartExample.TearDown() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddShirtToCartExample.cs:line 65"
+  },
+  "stage": "finished",
+  "description": "\nSetup SetUp method failed\n\nTearDown TearDown method failed\nAdd 'Faded Short Sleeve T-shirts' to cart\n",
+  "steps": [
+    {
+      "name": "AddShirtToCartExample skipped because of Setup failure",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "System.NullReferenceException : The WebDriver browser instance was not initialized. You should first call the method InitBrowser.\r\nTearDown : System.NullReferenceException : Object reference not set to an instance of an object.",
+        "trace": "   at ta_task_1.WrapperFactory.BrowserFactory.get_Driver() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\WrapperFactory\\BrowserFactory.cs:line 16\r\n   at ta_task_1.OnlineStoreAddShirtToCartExample.Setup() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddShirtToCartExample.cs:line 30\r\n--TearDown\r\n   at ta_task_1.OnlineStoreAddShirtToCartExample.TearDown() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddShirtToCartExample.cs:line 65"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "80e87f60ed594ecc998e7f0224f0666b-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1649774361236,
+      "stop": 1649774361301
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1649774361235,
+  "stop": 1649774361310
+}

@@ -1,0 +1,65 @@
+{
+  "uuid": "b7759e5e-fd3b-4f8e-a952-64718ae36fd3-tr-0-1004",
+  "historyId": "ta_task_1.OnlineStoreAddShirtToCart.AddShirtToCart2",
+  "fullName": "ta_task_1.OnlineStoreAddShirtToCart.AddShirtToCart2",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#8"
+    },
+    {
+      "name": "host",
+      "value": "BQTL0018"
+    },
+    {
+      "name": "package",
+      "value": "ta_task_1"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddShirtToCart2"
+    },
+    {
+      "name": "testClass",
+      "value": "OnlineStoreAddShirtToCart"
+    }
+  ],
+  "links": [],
+  "name": "AddShirtToCart2",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "AddShirtToCart2"
+  },
+  "stage": "finished",
+  "description": "Add 'Faded Short Sleeve T-shirts' to cart\n",
+  "steps": [
+    {
+      "name": "AddShirtToCart2",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "b483ba1d6972497ca9387b341674e36a-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1649172556081,
+      "stop": 1649172583125
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1649172556080,
+  "stop": 1649172583129
+}

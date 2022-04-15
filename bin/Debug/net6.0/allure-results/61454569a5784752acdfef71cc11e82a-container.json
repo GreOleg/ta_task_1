@@ -1,0 +1,46 @@
+{
+  "uuid": "68bb0ad8-8106-4797-8511-f152de2de776-tc-0-1002",
+  "name": "ta_task_1.OnlineStoreAddShirtToCart.AddShirtToCart2",
+  "children": [
+    "489df96a-057f-4779-a684-61b72700b123-tr-0-1004"
+  ],
+  "befores": [
+    {
+      "name": "Setup",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1649237983914,
+      "stop": 1649237983914
+    }
+  ],
+  "afters": [
+    {
+      "name": "TearDown",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "System.NullReferenceException : Object reference not set to an instance of an object.\r\nTearDown : System.NullReferenceException : Object reference not set to an instance of an object.",
+        "trace": "   at ta_task_1.OnlineStoreAddShirtToCart.AddShirtToCart2() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddShirtToCart.cs:line 86\r\n--TearDown\r\n   at ta_task_1.OnlineStoreAddShirtToCart.TearDown() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddShirtToCart.cs:line 111"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1649237983915,
+      "stop": 1649237983915
+    }
+  ],
+  "links": [],
+  "start": 1649237976576,
+  "stop": 1649237983946
+}

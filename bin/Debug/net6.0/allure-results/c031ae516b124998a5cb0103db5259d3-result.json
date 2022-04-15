@@ -1,0 +1,68 @@
+{
+  "uuid": "283dec00-8e7d-45f3-a6c1-58a730ad401f-tr-0-1003",
+  "historyId": "ta_task_1.OnlineStoreAddShirtToCart.AddShirtToCart",
+  "fullName": "ta_task_1.OnlineStoreAddShirtToCart.AddShirtToCart",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#8"
+    },
+    {
+      "name": "host",
+      "value": "BQTL0018"
+    },
+    {
+      "name": "package",
+      "value": "ta_task_1"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddShirtToCart"
+    },
+    {
+      "name": "testClass",
+      "value": "OnlineStoreAddShirtToCart"
+    }
+  ],
+  "links": [],
+  "name": "AddShirtToCart",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 20 seconds",
+    "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at ta_task_1.Helpers.WrapperForElement.ExpectedConditionsWaitElement(IWebDriver webDriver, By locator, Int32 seconds) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\Helpers\\WrapperForElement.cs:line 50\r\n   at ta_task_1.OnlineStoreAddShirtToCart.AddShirtToCart() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddShirtToCart.cs:line 77"
+  },
+  "stage": "finished",
+  "description": "Add 'Faded Short Sleeve T-shirts' to cart\n",
+  "steps": [
+    {
+      "name": "AddShirtToCart",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 20 seconds",
+        "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at ta_task_1.Helpers.WrapperForElement.ExpectedConditionsWaitElement(IWebDriver webDriver, By locator, Int32 seconds) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\Helpers\\WrapperForElement.cs:line 50\r\n   at ta_task_1.OnlineStoreAddShirtToCart.AddShirtToCart() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddShirtToCart.cs:line 77"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "312ed02678c549f9af2f4b708b461dc9-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1649262214437,
+      "stop": 1649262247759
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1649262214436,
+  "stop": 1649262247764
+}

@@ -1,0 +1,165 @@
+{
+  "uuid": "5700842f-9ee0-4109-ae90-624c1b41c4e0-tr-0-1007",
+  "historyId": "ta_task_1.OnlineStoreCreateNewUserTest.CreateNewUserTest(\"User3\")",
+  "fullName": "ta_task_1.OnlineStoreCreateNewUserTest.CreateNewUserTest(\"User3\")",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "BQTL0018"
+    },
+    {
+      "name": "package",
+      "value": "ta_task_1"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateNewUserTest"
+    },
+    {
+      "name": "testClass",
+      "value": "OnlineStoreCreateNewUserTest"
+    },
+    {
+      "name": "tag",
+      "value": "NUnit"
+    },
+    {
+      "name": "tag",
+      "value": "Debug"
+    },
+    {
+      "name": "feature",
+      "value": "Core"
+    }
+  ],
+  "links": [
+    {
+      "name": "Online Store",
+      "url": "http://automationpractice.com",
+      "type": "link"
+    }
+  ],
+  "name": "CreateNewUserTest(\"User3\")",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "CreateNewUserTest(\"User3\")"
+  },
+  "stage": "finished",
+  "description": "Regestration new user\n",
+  "steps": [
+    {
+      "name": "CreateNewUserTest(\"User3\")",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "Go to URL => http://automationpractice.com",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "http://automationpractice.com"
+            }
+          ],
+          "start": 1649154757863,
+          "stop": 1649154761863
+        },
+        {
+          "name": "Create an new account(User) with Email marietta.dubuque@mitchell.ca",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "marietta.dubuque@mitchell.ca"
+            }
+          ],
+          "start": 1649154763534,
+          "stop": 1649154763964
+        },
+        {
+          "name": "SubmitNewUserForm",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [
+            {
+              "name": "SubmitNewUserForm",
+              "status": "passed",
+              "statusDetails": {
+                "known": false,
+                "muted": false,
+                "flaky": false
+              },
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "start": 1649154769005,
+              "stop": 1649154769005
+            }
+          ],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "User3"
+            }
+          ],
+          "start": 1649154763964,
+          "stop": 1649154769005
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "26b4ecdab9254288b6276f34e12751e0-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1649154757827,
+      "stop": 1649154769010
+    }
+  ],
+  "attachments": [],
+  "parameters": [
+    {
+      "name": "Param #0",
+      "value": "User3"
+    }
+  ],
+  "start": 1649154757827,
+  "stop": 1649154769013
+}

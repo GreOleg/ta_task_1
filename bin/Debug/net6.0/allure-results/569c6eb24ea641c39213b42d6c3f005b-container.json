@@ -1,0 +1,76 @@
+{
+  "uuid": "ab3a578a-b72a-4482-abeb-774422e3619d-tc-0-1006",
+  "name": "ta_task_1.OnlineStoreCreateNewUserTest.CreateNewUserTest(\"User2\")",
+  "children": [
+    "71d52806-655d-41cb-aa2c-c22b57a9b430-tr-0-1008"
+  ],
+  "befores": [
+    {
+      "name": "DoBeforAllTheTests",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1649325330235,
+      "stop": 1649325330235
+    },
+    {
+      "name": "DoBeforEach",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1649325330235,
+      "stop": 1649325330235
+    }
+  ],
+  "afters": [
+    {
+      "name": "DoAfterEach",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1649325330235,
+      "stop": 1649325330235
+    },
+    {
+      "name": "DoAfterAllTheTests",
+      "status": "none",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "It's not possible to get status of OneTimeTearDown",
+        "trace": "See Allure.NUnit wiki"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1649325330235,
+      "stop": 1649325330235
+    }
+  ],
+  "links": [],
+  "start": 1649325329786,
+  "stop": 1649325330240
+}

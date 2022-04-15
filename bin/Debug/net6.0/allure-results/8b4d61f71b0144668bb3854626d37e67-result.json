@@ -1,0 +1,119 @@
+{
+  "uuid": "0bcf5d5f-f143-401f-8cac-9d24f348c09f-tr-0-1004",
+  "historyId": "ta_task_1.OnlineStoreCreateNewUserTest.CreateNewUserTest(\"User2\")",
+  "fullName": "ta_task_1.OnlineStoreCreateNewUserTest.CreateNewUserTest(\"User2\")",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "BQTL0018"
+    },
+    {
+      "name": "package",
+      "value": "ta_task_1"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateNewUserTest"
+    },
+    {
+      "name": "testClass",
+      "value": "OnlineStoreCreateNewUserTest"
+    },
+    {
+      "name": "tag",
+      "value": "NUnit"
+    },
+    {
+      "name": "tag",
+      "value": "Debug"
+    },
+    {
+      "name": "feature",
+      "value": "Core"
+    }
+  ],
+  "links": [
+    {
+      "name": "Online Store",
+      "url": "http://automationpractice.com",
+      "type": "link"
+    }
+  ],
+  "name": "CreateNewUserTest(\"User2\")",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 20 seconds\r\n  ----> OpenQA.Selenium.NoSuchElementException : Could not find element by: By.CssSelector: form#create-account_form",
+    "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at ta_task_1.WaitUntil.ExpectedConditionsWaitElement(IWebDriver webDriver, IWebElement locator, Int32 seconds) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\Helpers\\WaitUntil.cs:line 18\r\n   at ta_task_1.PageObjects.CreateAnAccountFormPageObject.__a$_around_SubmitCreateAnAcountForm_100663378_o(String userEmail) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\PageObjects\\CreateAnAccountFormPageObject.cs:line 24\r\n   at ta_task_1.PageObjects.CreateAnAccountFormPageObject.__a$_around_SubmitCreateAnAcountForm_100663378_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at ta_task_1.PageObjects.CreateAnAccountFormPageObject.__a$_around_SubmitCreateAnAcountForm_100663378_w_0(Object[] )\r\n   at ta_task_1.PageObjects.CreateAnAccountFormPageObject.SubmitCreateAnAcountForm(String userEmail) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\PageObjects\\CreateAnAccountFormPageObject.cs:line 10\r\n   at ta_task_1.OnlineStoreCreateNewUserTest.CreateNewUserTest(String user) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreCreateNewUserTest.cs:line 25\r\n--NoSuchElementException\r\n   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_Displayed()\r\n   at SeleniumExtras.WaitHelpers.ExpectedConditions.<>c__DisplayClass20_0.<ElementToBeClickable>b__0(IWebDriver driver)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)"
+  },
+  "stage": "finished",
+  "description": "Regestration new user\n",
+  "steps": [
+    {
+      "name": "CreateNewUserTest(\"User2\")",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.WebDriverTimeoutException : Timed out after 20 seconds\r\n  ----> OpenQA.Selenium.NoSuchElementException : Could not find element by: By.CssSelector: form#create-account_form",
+        "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at ta_task_1.WaitUntil.ExpectedConditionsWaitElement(IWebDriver webDriver, IWebElement locator, Int32 seconds) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\Helpers\\WaitUntil.cs:line 18\r\n   at ta_task_1.PageObjects.CreateAnAccountFormPageObject.__a$_around_SubmitCreateAnAcountForm_100663378_o(String userEmail) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\PageObjects\\CreateAnAccountFormPageObject.cs:line 24\r\n   at ta_task_1.PageObjects.CreateAnAccountFormPageObject.__a$_around_SubmitCreateAnAcountForm_100663378_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at ta_task_1.PageObjects.CreateAnAccountFormPageObject.__a$_around_SubmitCreateAnAcountForm_100663378_w_0(Object[] )\r\n   at ta_task_1.PageObjects.CreateAnAccountFormPageObject.SubmitCreateAnAcountForm(String userEmail) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\PageObjects\\CreateAnAccountFormPageObject.cs:line 10\r\n   at ta_task_1.OnlineStoreCreateNewUserTest.CreateNewUserTest(String user) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreCreateNewUserTest.cs:line 25\r\n--NoSuchElementException\r\n   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_Displayed()\r\n   at SeleniumExtras.WaitHelpers.ExpectedConditions.<>c__DisplayClass20_0.<ElementToBeClickable>b__0(IWebDriver driver)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "Create an new account(User) with Email uriel.schaden@ziemannschneider.co.uk",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "Timed out after 20 seconds",
+            "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)\r\n   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)\r\n   at ta_task_1.WaitUntil.ExpectedConditionsWaitElement(IWebDriver webDriver, IWebElement locator, Int32 seconds) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\Helpers\\WaitUntil.cs:line 18\r\n   at ta_task_1.PageObjects.CreateAnAccountFormPageObject.__a$_around_SubmitCreateAnAcountForm_100663378_o(String userEmail) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\PageObjects\\CreateAnAccountFormPageObject.cs:line 24\r\n   at ta_task_1.PageObjects.CreateAnAccountFormPageObject.__a$_around_SubmitCreateAnAcountForm_100663378_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "uriel.schaden@ziemannschneider.co.uk"
+            }
+          ],
+          "start": 1649073780604,
+          "stop": 1649073801105
+        }
+      ],
+      "attachments": [
+        {
+          "name": "CreateNewUserTest_screenshot_637846814013838679.png",
+          "source": "d31dd75dd83749a79f1b09c62ed7fd4b-attachment.png",
+          "type": "image/png"
+        },
+        {
+          "name": "Console Output",
+          "source": "bbc81a8bac5145c2ae456b1114c5289f-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1649073762886,
+      "stop": 1649073801409
+    }
+  ],
+  "attachments": [],
+  "parameters": [
+    {
+      "name": "Param #0",
+      "value": "User2"
+    }
+  ],
+  "start": 1649073762886,
+  "stop": 1649073801416
+}

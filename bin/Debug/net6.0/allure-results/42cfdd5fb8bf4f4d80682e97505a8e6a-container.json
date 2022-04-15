@@ -1,0 +1,28 @@
+{
+  "uuid": "86f2e5f5-1cb3-4302-b649-a188292831a8-tc-0-1004",
+  "name": "ta_task_1.OnlineStoreAddShirtToCartExample.AddShirtToCartExample",
+  "children": [
+    "8e62c3cf-3237-4c41-99e3-ce1d66f18a34-tr-0-1005"
+  ],
+  "befores": [
+    {
+      "name": "Setup",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1649774878907,
+      "stop": 1649774878907
+    }
+  ],
+  "afters": [],
+  "links": [],
+  "start": 1649774863090,
+  "stop": 1649774878949
+}

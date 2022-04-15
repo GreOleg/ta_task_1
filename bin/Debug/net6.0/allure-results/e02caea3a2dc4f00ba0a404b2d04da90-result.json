@@ -1,0 +1,68 @@
+{
+  "uuid": "633fd0eb-524b-4fe0-bd95-2f99547ff8cc-tr-0-1005",
+  "historyId": "ta_task_1.OnlineStoreAddShirtToCartExample.AddShirtToCartExample",
+  "fullName": "ta_task_1.OnlineStoreAddShirtToCartExample.AddShirtToCartExample",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "BQTL0018"
+    },
+    {
+      "name": "package",
+      "value": "ta_task_1"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddShirtToCartExample"
+    },
+    {
+      "name": "testClass",
+      "value": "OnlineStoreAddShirtToCartExample"
+    }
+  ],
+  "links": [],
+  "name": "AddShirtToCartExample",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "System.NullReferenceException : Object reference not set to an instance of an object.\r\nTearDown : System.NullReferenceException : Object reference not set to an instance of an object.",
+    "trace": "   at ta_task_1.OnlineStoreAddShirtToCartExample.Setup() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddShirtToCartExample.cs:line 32\r\n--TearDown\r\n   at ta_task_1.OnlineStoreAddShirtToCartExample.TearDown() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddShirtToCartExample.cs:line 66"
+  },
+  "stage": "finished",
+  "description": "\nSetup SetUp method failed\n\nTearDown TearDown method failed\nAdd 'Faded Short Sleeve T-shirts' to cart\n",
+  "steps": [
+    {
+      "name": "AddShirtToCartExample skipped because of Setup failure",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "System.NullReferenceException : Object reference not set to an instance of an object.\r\nTearDown : System.NullReferenceException : Object reference not set to an instance of an object.",
+        "trace": "   at ta_task_1.OnlineStoreAddShirtToCartExample.Setup() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddShirtToCartExample.cs:line 32\r\n--TearDown\r\n   at ta_task_1.OnlineStoreAddShirtToCartExample.TearDown() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddShirtToCartExample.cs:line 66"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "86b39c9a860c43abbbd45d2942c34e3f-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1649774443726,
+      "stop": 1649774444869
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1649774443725,
+  "stop": 1649774444876
+}

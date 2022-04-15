@@ -1,0 +1,68 @@
+{
+  "uuid": "8679bde2-3d7b-4caf-a632-eb90047256d7-tr-0-1005",
+  "historyId": "ta_task_1.OnlineStoreAddShirtToCartExample.AddShirtToCartExample",
+  "fullName": "ta_task_1.OnlineStoreAddShirtToCartExample.AddShirtToCartExample",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "BQTL0018"
+    },
+    {
+      "name": "package",
+      "value": "ta_task_1"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddShirtToCartExample"
+    },
+    {
+      "name": "testClass",
+      "value": "OnlineStoreAddShirtToCartExample"
+    }
+  ],
+  "links": [],
+  "name": "AddShirtToCartExample",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "System.ArgumentNullException : input cannot be null (Parameter 'input')",
+    "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1..ctor(T input, IClock clock)\r\n   at OpenQA.Selenium.Support.UI.WebDriverWait..ctor(IClock clock, IWebDriver driver, TimeSpan timeout, TimeSpan sleepInterval)\r\n   at OpenQA.Selenium.Support.UI.WebDriverWait..ctor(IWebDriver driver, TimeSpan timeout)\r\n   at ta_task_1.Helpers.WElement.InputText(String text, Int32 waitInterval) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\Helpers\\WElement.cs:line 31\r\n   at ta_task_1.OnlineStoreAddShirtToCartExample.AddShirtToCartExample() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddShirtToCartExample.cs:line 42"
+  },
+  "stage": "finished",
+  "description": "Add 'Faded Short Sleeve T-shirts' to cart\n",
+  "steps": [
+    {
+      "name": "AddShirtToCartExample",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "System.ArgumentNullException : input cannot be null (Parameter 'input')",
+        "trace": "   at OpenQA.Selenium.Support.UI.DefaultWait`1..ctor(T input, IClock clock)\r\n   at OpenQA.Selenium.Support.UI.WebDriverWait..ctor(IClock clock, IWebDriver driver, TimeSpan timeout, TimeSpan sleepInterval)\r\n   at OpenQA.Selenium.Support.UI.WebDriverWait..ctor(IWebDriver driver, TimeSpan timeout)\r\n   at ta_task_1.Helpers.WElement.InputText(String text, Int32 waitInterval) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\Helpers\\WElement.cs:line 31\r\n   at ta_task_1.OnlineStoreAddShirtToCartExample.AddShirtToCartExample() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddShirtToCartExample.cs:line 42"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "9b44f348a7ee4c8fb0d5fcedebaa73ae-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1649774609867,
+      "stop": 1649774616712
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1649774609866,
+  "stop": 1649774616716
+}

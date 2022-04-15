@@ -1,0 +1,144 @@
+{
+  "uuid": "f3c6f478-b8e1-400e-80dc-50c493055b55-tr-0-1001",
+  "historyId": "ta_task_1.OnlineStoreAddItemsToCartTest.AddItemsToCartTest",
+  "fullName": "ta_task_1.OnlineStoreAddItemsToCartTest.AddItemsToCartTest",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "BQTL0018"
+    },
+    {
+      "name": "package",
+      "value": "ta_task_1"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddItemsToCartTest"
+    },
+    {
+      "name": "testClass",
+      "value": "OnlineStoreAddItemsToCartTest"
+    },
+    {
+      "name": "tag",
+      "value": "NUnit"
+    },
+    {
+      "name": "tag",
+      "value": "Debug"
+    },
+    {
+      "name": "feature",
+      "value": "Core"
+    }
+  ],
+  "links": [
+    {
+      "name": "Online Store",
+      "url": "http://automationpractice.com",
+      "type": "link"
+    }
+  ],
+  "name": "AddItemsToCartTest",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "AddItemsToCartTest"
+  },
+  "stage": "finished",
+  "description": "Add 2 dresses to cart\n",
+  "steps": [
+    {
+      "name": "AddItemsToCartTest",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "Go to URL => http://automationpractice.com/index.php?controller=authentication&back=my-account",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "http://automationpractice.com/index.php?controller=authentication&back=my-account"
+            }
+          ],
+          "start": 1649774204541,
+          "stop": 1649774209736
+        },
+        {
+          "name": "Go to URL => http://automationpractice.com/index.php?id_category=11&controller=category",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "http://automationpractice.com/index.php?id_category=11&controller=category"
+            }
+          ],
+          "start": 1649774212238,
+          "stop": 1649774214063
+        },
+        {
+          "name": "Go to URL => http://automationpractice.com/index.php?controller=order",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "http://automationpractice.com/index.php?controller=order"
+            }
+          ],
+          "start": 1649774220068,
+          "stop": 1649774222228
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "e15f52914fe446c4bf12b19cb11b7410-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1649774204353,
+      "stop": 1649774222496
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1649774204353,
+  "stop": 1649774222504
+}

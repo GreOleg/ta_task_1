@@ -1,0 +1,96 @@
+{
+  "uuid": "0ab93356-7240-4049-94b6-451c3780db06-tr-0-1004",
+  "historyId": "ta_task_1.OnlineStoreCreateNewUserTest.CreateNewUserTest(\"User2\")",
+  "fullName": "ta_task_1.OnlineStoreCreateNewUserTest.CreateNewUserTest(\"User2\")",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "BQTL0018"
+    },
+    {
+      "name": "package",
+      "value": "ta_task_1"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateNewUserTest"
+    },
+    {
+      "name": "testClass",
+      "value": "OnlineStoreCreateNewUserTest"
+    },
+    {
+      "name": "tag",
+      "value": "NUnit"
+    },
+    {
+      "name": "tag",
+      "value": "Debug"
+    },
+    {
+      "name": "feature",
+      "value": "Core"
+    }
+  ],
+  "links": [
+    {
+      "name": "Online Store",
+      "url": "http://automationpractice.com",
+      "type": "link"
+    }
+  ],
+  "name": "CreateNewUserTest(\"User2\")",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.NoSuchElementException : Could not find element by: By.CssSelector: a.login",
+    "trace": "   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at ta_task_1.PageObjects.MainPageObject.GoToAuthenticationPage() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\PageObjects\\MainPageObject.cs:line 17\r\n   at ta_task_1.OnlineStoreCreateNewUserTest.CreateNewUserTest(String user) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreCreateNewUserTest.cs:line 24"
+  },
+  "stage": "finished",
+  "description": "Regestration new user\n",
+  "steps": [
+    {
+      "name": "CreateNewUserTest(\"User2\")",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.NoSuchElementException : Could not find element by: By.CssSelector: a.login",
+        "trace": "   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at ta_task_1.PageObjects.MainPageObject.GoToAuthenticationPage() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\PageObjects\\MainPageObject.cs:line 17\r\n   at ta_task_1.OnlineStoreCreateNewUserTest.CreateNewUserTest(String user) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreCreateNewUserTest.cs:line 24"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "CreateNewUserTest_screenshot_637846814884907255.png",
+          "source": "94369a2385c9460db4363b0ab5ad380c-attachment.png",
+          "type": "image/png"
+        },
+        {
+          "name": "Console Output",
+          "source": "d0e27bbefbc149fdb13c45f637404a2b-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1649073885376,
+      "stop": 1649073888513
+    }
+  ],
+  "attachments": [],
+  "parameters": [
+    {
+      "name": "Param #0",
+      "value": "User2"
+    }
+  ],
+  "start": 1649073885376,
+  "stop": 1649073888518
+}

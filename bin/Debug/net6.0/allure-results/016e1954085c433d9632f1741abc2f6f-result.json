@@ -1,0 +1,159 @@
+{
+  "uuid": "2edee1a5-d22d-4dee-a21e-ae9bd5d4a019-tr-0-1006",
+  "historyId": "ta_task_1.OnlineStoreCreateNewUserTest.CreateNewUserTest(\"User2\")",
+  "fullName": "ta_task_1.OnlineStoreCreateNewUserTest.CreateNewUserTest(\"User2\")",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "BQTL0018"
+    },
+    {
+      "name": "package",
+      "value": "ta_task_1"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateNewUserTest"
+    },
+    {
+      "name": "testClass",
+      "value": "OnlineStoreCreateNewUserTest"
+    },
+    {
+      "name": "tag",
+      "value": "NUnit"
+    },
+    {
+      "name": "tag",
+      "value": "Debug"
+    },
+    {
+      "name": "feature",
+      "value": "Core"
+    }
+  ],
+  "links": [
+    {
+      "name": "Online Store",
+      "url": "http://automationpractice.com",
+      "type": "link"
+    }
+  ],
+  "name": "CreateNewUserTest(\"User2\")",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.NoSuchElementException : Cannot locate option with value: 15",
+    "trace": "   at OpenQA.Selenium.Support.UI.SelectElement.SelectByValue(String value)\r\n   at ta_task_1.PageObjects.RegistrationUserFormPageObject.__a$_around_SubmitNewUserForm_100663442_o(String userId) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\PageObjects\\RegistrationUserFormPageObject.cs:line 89\r\n   at ta_task_1.PageObjects.RegistrationUserFormPageObject.__a$_around_SubmitNewUserForm_100663442_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at ta_task_1.PageObjects.RegistrationUserFormPageObject.__a$_around_SubmitNewUserForm_100663442_w_0(Object[] )\r\n   at ta_task_1.PageObjects.RegistrationUserFormPageObject.SubmitNewUserForm(String userId) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\PageObjects\\RegistrationUserFormPageObject.cs:line 91\r\n   at ta_task_1.OnlineStoreCreateNewUserTest.CreateNewUserTest(String user) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreCreateNewUserTest.cs:line 26"
+  },
+  "stage": "finished",
+  "description": "Regestration new user\n",
+  "steps": [
+    {
+      "name": "CreateNewUserTest(\"User2\")",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.NoSuchElementException : Cannot locate option with value: 15",
+        "trace": "   at OpenQA.Selenium.Support.UI.SelectElement.SelectByValue(String value)\r\n   at ta_task_1.PageObjects.RegistrationUserFormPageObject.__a$_around_SubmitNewUserForm_100663442_o(String userId) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\PageObjects\\RegistrationUserFormPageObject.cs:line 89\r\n   at ta_task_1.PageObjects.RegistrationUserFormPageObject.__a$_around_SubmitNewUserForm_100663442_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at ta_task_1.PageObjects.RegistrationUserFormPageObject.__a$_around_SubmitNewUserForm_100663442_w_0(Object[] )\r\n   at ta_task_1.PageObjects.RegistrationUserFormPageObject.SubmitNewUserForm(String userId) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\PageObjects\\RegistrationUserFormPageObject.cs:line 91\r\n   at ta_task_1.OnlineStoreCreateNewUserTest.CreateNewUserTest(String user) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreCreateNewUserTest.cs:line 26"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "Go to URL => http://automationpractice.com",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "http://automationpractice.com"
+            }
+          ],
+          "start": 1649088141747,
+          "stop": 1649088153350
+        },
+        {
+          "name": "Create an new account(User) with Email dorris_ritchie@fritsch.info",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "dorris_ritchie@fritsch.info"
+            }
+          ],
+          "start": 1649088161025,
+          "stop": 1649088161190
+        },
+        {
+          "name": "SubmitNewUserForm",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "Cannot locate option with value: 15",
+            "trace": "   at OpenQA.Selenium.Support.UI.SelectElement.SelectByValue(String value)\r\n   at ta_task_1.PageObjects.RegistrationUserFormPageObject.__a$_around_SubmitNewUserForm_100663442_o(String userId) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\PageObjects\\RegistrationUserFormPageObject.cs:line 89\r\n   at ta_task_1.PageObjects.RegistrationUserFormPageObject.__a$_around_SubmitNewUserForm_100663442_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "User2"
+            }
+          ],
+          "start": 1649088161190,
+          "stop": 1649088169486
+        }
+      ],
+      "attachments": [
+        {
+          "name": "CreateNewUserTest_screenshot_637846957696717307.png",
+          "source": "2d5128713db741238094c1d38459106e-attachment.png",
+          "type": "image/png"
+        },
+        {
+          "name": "Console Output",
+          "source": "1cd23dfdc5104f5cb55fe2ef812096b7-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1649088141720,
+      "stop": 1649088169678
+    }
+  ],
+  "attachments": [],
+  "parameters": [
+    {
+      "name": "Param #0",
+      "value": "User2"
+    }
+  ],
+  "start": 1649088141720,
+  "stop": 1649088169678
+}

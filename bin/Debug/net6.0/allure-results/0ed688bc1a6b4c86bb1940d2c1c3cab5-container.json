@@ -1,0 +1,44 @@
+{
+  "uuid": "9f185aaa-e7c5-48d8-9a5d-eab491c80d2c-tc-0-1002",
+  "name": "ta_task_1.OnlineStoreAddShirtToCart.AddShirtToCart",
+  "children": [
+    "662bf92e-794d-470e-9e56-e7901e052f7f-tr-0-1003"
+  ],
+  "befores": [
+    {
+      "name": "Setup",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1649260137867,
+      "stop": 1649260137867
+    }
+  ],
+  "afters": [
+    {
+      "name": "TearDown",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1649260137867,
+      "stop": 1649260137867
+    }
+  ],
+  "links": [],
+  "start": 1649260115932,
+  "stop": 1649260137922
+}

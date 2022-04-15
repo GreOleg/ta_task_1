@@ -1,0 +1,76 @@
+{
+  "uuid": "1236b722-e8f6-41e7-a880-de46917980e2-tc-0-1000",
+  "name": "ta_task_1.OnlineStoreAddItemsToCartTest.AddItemsToCartTest",
+  "children": [
+    "2885ea44-152f-46da-a6a5-bb905c36cd02-tr-0-1001"
+  ],
+  "befores": [
+    {
+      "name": "DoBeforAllTheTests",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1649154832628,
+      "stop": 1649154832628
+    },
+    {
+      "name": "DoBeforEach",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1649154832628,
+      "stop": 1649154832628
+    }
+  ],
+  "afters": [
+    {
+      "name": "DoAfterEach",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1649154832628,
+      "stop": 1649154832628
+    },
+    {
+      "name": "DoAfterAllTheTests",
+      "status": "none",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "It's not possible to get status of OneTimeTearDown",
+        "trace": "See Allure.NUnit wiki"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1649154832628,
+      "stop": 1649154832628
+    }
+  ],
+  "links": [],
+  "start": 1649154814181,
+  "stop": 1649154832684
+}

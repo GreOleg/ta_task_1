@@ -1,0 +1,48 @@
+{
+  "uuid": "523cd89f-8421-436a-879c-7b18b9d23402-tc-0-1002",
+  "name": "ta_task_1.OnlineStoreAddShirtToCart.AddShirtToCart",
+  "children": [
+    "c8af9541-2f87-4a14-b348-fc63a49c6f9c-tr-0-1003"
+  ],
+  "befores": [
+    {
+      "name": "Setup",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "System.ArgumentException : There is already an option for the browserName capability. Please use the BrowserName property instead. (Parameter 'capabilityName')\r\nTearDown : System.NullReferenceException : Object reference not set to an instance of an object.",
+        "trace": "   at OpenQA.Selenium.DriverOptions.ValidateCapabilityName(String capabilityName)\r\n   at OpenQA.Selenium.DriverOptions.AddAdditionalOption(String optionName, Object optionValue)\r\n   at OpenQA.Selenium.Chromium.ChromiumOptions.AddAdditionalCapability(String capabilityName, Object capabilityValue, Boolean isGlobalCapability)\r\n   at ta_task_1.OnlineStoreAddShirtToCart.Setup() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddShirtToCart.cs:line 47\r\n--TearDown\r\n   at ta_task_1.OnlineStoreAddShirtToCart.TearDown() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddShirtToCart.cs:line 113"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1649239000328,
+      "stop": 1649239000328
+    }
+  ],
+  "afters": [
+    {
+      "name": "TearDown",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "System.ArgumentException : There is already an option for the browserName capability. Please use the BrowserName property instead. (Parameter 'capabilityName')\r\nTearDown : System.NullReferenceException : Object reference not set to an instance of an object.",
+        "trace": "   at OpenQA.Selenium.DriverOptions.ValidateCapabilityName(String capabilityName)\r\n   at OpenQA.Selenium.DriverOptions.AddAdditionalOption(String optionName, Object optionValue)\r\n   at OpenQA.Selenium.Chromium.ChromiumOptions.AddAdditionalCapability(String capabilityName, Object capabilityValue, Boolean isGlobalCapability)\r\n   at ta_task_1.OnlineStoreAddShirtToCart.Setup() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddShirtToCart.cs:line 47\r\n--TearDown\r\n   at ta_task_1.OnlineStoreAddShirtToCart.TearDown() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddShirtToCart.cs:line 113"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1649239000329,
+      "stop": 1649239000329
+    }
+  ],
+  "links": [],
+  "start": 1649239000289,
+  "stop": 1649239000366
+}

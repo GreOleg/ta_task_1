@@ -1,0 +1,51 @@
+//{
+//  "allure": {
+//    "directory": "C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\bin\\Debug\\net6.0\\allure-results",
+//    "links": [
+//      "https://github.com/AutomateThePlanet/Meissa/issues/{issue}",
+//      "https://github.com/AutomateThePlanet/Meissa/projects/2#card-{tms}",
+//      "{link}"
+//    ],
+//    "brokenTestData": [
+//      "System.Exception"
+//    ]
+//  }
+//}
+
+{
+  "allure": {
+    "directory": "C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\bin\\Debug\\net6.0\\allure-results",
+    "links": [
+      "{link}",
+      "https://testrail.com/browse/{tms}",
+      "https://jira.com/browse/{issue}"
+    ]
+  },
+  "specflow": {
+    "stepArguments": {
+      "convertToParameters": "true",
+      "paramNameRegex": "",
+      "paramValueRegex": ""
+    },
+    "grouping": {
+      "suites": {
+        "parentSuite": "^parentSuite:?(.+)",
+        "suite": "^suite:?(.+)",
+        "subSuite": "^subSuite:?(.+)"
+      },
+      "behaviors": {
+        "epic": "^epic:?(.+)",
+        "story": "^story:(.+)"
+      }
+    },
+    "labels": {
+      "owner": "^author:?(.+)",
+      "severity": "^(normal|blocker|critical|minor|trivial)"
+    },
+    "links": {
+      "tms": "^story:(.+)",
+      "issue": "^issue:(.+)",
+      "link": "^link:(.+)"
+    }
+  }
+}

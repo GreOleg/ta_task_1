@@ -1,0 +1,123 @@
+{
+  "uuid": "299972b4-bf1b-44b6-9fd3-03661afc9672-tr-0-1005",
+  "historyId": "ta_task_1.OnlineStoreCreateNewUserTest.CreateNewUserTest(\"User3\")",
+  "fullName": "ta_task_1.OnlineStoreCreateNewUserTest.CreateNewUserTest(\"User3\")",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "BQTL0018"
+    },
+    {
+      "name": "package",
+      "value": "ta_task_1"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateNewUserTest"
+    },
+    {
+      "name": "testClass",
+      "value": "OnlineStoreCreateNewUserTest"
+    },
+    {
+      "name": "tag",
+      "value": "NUnit"
+    },
+    {
+      "name": "tag",
+      "value": "Debug"
+    },
+    {
+      "name": "feature",
+      "value": "Core"
+    }
+  ],
+  "links": [],
+  "name": "CreateNewUserTest(\"User3\")",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "CreateNewUserTest(\"User3\")"
+  },
+  "stage": "finished",
+  "description": "Regestration new user\n",
+  "steps": [
+    {
+      "name": "CreateNewUserTest(\"User3\")",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "Create an new account(User) with Email osborne@schultz.biz",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "osborne@schultz.biz"
+            }
+          ],
+          "start": 1649073176649,
+          "stop": 1649073176959
+        },
+        {
+          "name": "Create new user with First Name {userData.firstNameUser}, Last Name {userData.lastNameUser}, Password {userData.passwordUser}, Addres {userData.addressUser}, City {userData.cityUser}, Mobile Phone {userData.mobilePhoneUser}",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [
+            {
+              "name": "String",
+              "value": "User3"
+            }
+          ],
+          "start": 1649073176960,
+          "stop": 1649073181904
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "45dd1eb8420546fb8c52e2f720018c31-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1649073168660,
+      "stop": 1649073181913
+    }
+  ],
+  "attachments": [],
+  "parameters": [
+    {
+      "name": "Param #0",
+      "value": "User3"
+    }
+  ],
+  "start": 1649073168658,
+  "stop": 1649073181918
+}

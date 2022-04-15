@@ -1,0 +1,64 @@
+{
+  "uuid": "f5eb5267-7821-441b-8cb9-f1efd9352cfd-tr-0-1001",
+  "historyId": "ta_task_1.OnlineStoreAddItemsToCartTest.AddItemsToCartTest",
+  "fullName": "ta_task_1.OnlineStoreAddItemsToCartTest.AddItemsToCartTest",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "BQTL0018"
+    },
+    {
+      "name": "package",
+      "value": "ta_task_1"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddItemsToCartTest"
+    },
+    {
+      "name": "testClass",
+      "value": "OnlineStoreAddItemsToCartTest"
+    }
+  ],
+  "links": [],
+  "name": "AddItemsToCartTest",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "AddItemsToCartTest"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "AddItemsToCartTest",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "89171c2a762a497dbd94ddddee51852d-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1649062505541,
+      "stop": 1649062529879
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1649062505540,
+  "stop": 1649062529885
+}

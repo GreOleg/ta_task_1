@@ -1,0 +1,72 @@
+{
+  "uuid": "4b67229b-5c4f-4d73-b1dd-bc1d554c65b4-tr-0-1001",
+  "historyId": "ta_task_1.OnlineStoreAddItemsToCartTest.AddItemsToCartTest",
+  "fullName": "ta_task_1.OnlineStoreAddItemsToCartTest.AddItemsToCartTest",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "BQTL0018"
+    },
+    {
+      "name": "package",
+      "value": "ta_task_1"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddItemsToCartTest"
+    },
+    {
+      "name": "testClass",
+      "value": "OnlineStoreAddItemsToCartTest"
+    }
+  ],
+  "links": [],
+  "name": "AddItemsToCartTest",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected string length 15 but was 21. Strings differ at index 15.\r\n  Expected: \"Printed Chiffon\"\r\n  But was:  \"Printed Chiffon Dress\"\r\n  --------------------------^\r\n",
+    "trace": "   at ta_task_1.Asserts.CheckText(IWebElement locator, String expextedText) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\Helpers\\Asserts.cs:line 14\r\n   at ta_task_1.PageObjects.CartPageObject.AssertItemInCart(String item) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\PageObjects\\CartPageObject.cs:line 18\r\n   at ta_task_1.OnlineStoreAddItemsToCartTest.AddItemsToCartTest() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddItemsToCartTest.cs:line 23\r\n"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "AddItemsToCartTest",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected string length 15 but was 21. Strings differ at index 15.\r\n  Expected: \"Printed Chiffon\"\r\n  But was:  \"Printed Chiffon Dress\"\r\n  --------------------------^\r\n",
+        "trace": "   at ta_task_1.Asserts.CheckText(IWebElement locator, String expextedText) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\Helpers\\Asserts.cs:line 14\r\n   at ta_task_1.PageObjects.CartPageObject.AssertItemInCart(String item) in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\PageObjects\\CartPageObject.cs:line 18\r\n   at ta_task_1.OnlineStoreAddItemsToCartTest.AddItemsToCartTest() in C:\\Users\\ahresik\\Documents\\mentoring-tasks-project\\ta_task_1\\OnlineStoreAddItemsToCartTest.cs:line 23\r\n"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "AddItemsToCartTest_screenshot_637846723119198749.png",
+          "source": "a844e80550ad403ab9016ab82c60870a-attachment.png",
+          "type": "image/png"
+        },
+        {
+          "name": "Console Output",
+          "source": "fb3f47eac81f4811a7772fc5003d5025-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1649064660396,
+      "stop": 1649064711952
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1649064660395,
+  "stop": 1649064711958
+}
